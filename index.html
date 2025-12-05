@@ -10,7 +10,7 @@
   <meta name="robots" content="index,follow">
   <meta name="googlebot" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
   <meta name="author" content="Vincent Letort (Vincent Bastille)">
-  <meta name="keywords" content="Vincent Bastille, DJ Vincent Bastille, Vincent Letort, DJ français, producteur musique électronique, drum and bass, liquid drum and bass, ambient, trip-hop, electronica, house, techno, bande originale, Mystic, Le Lac, Wondering Stars, HyperCub, Spectra Media AI, scénographie danse, Le Mans, France, Bandcamp, Spotify">
+  <meta name="keywords" content="Vincent Bastille, DJ Vincent Bastille, Vincent Letort, DJ français, producteur musique électronique, drum and bass, liquid drum and bass, ambient, trip-hop, electronica, house, techno, bande originale, Mystic, Le Lac, Wondering Stars, HyperCub, Spectra Media AI, musique de film, BO film, scénographie danse, Le Mans, France, Bandcamp, Spotify">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Vincent Bastille — Site officiel, biographie & discographie">
@@ -18,11 +18,14 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:url" content="https://vincentbastille.online">
+  <meta property="og:image" content="https://vincentbastille.online/a-dramatic-studio-portrait-photograph-of_1Z3UG7AvT3yhOnKlIuTgeA_NJlwurn0T8yjR68TR1gnWw%20(1)%20copie.jpeg">
+  <meta property="og:image:alt" content="Portrait de Vincent Bastille, DJ et compositeur français de musique électronique.">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Vincent Bastille — Site officiel">
   <meta name="twitter:description" content="Biographie, discographie, bandes originales de films et projets IA de Vincent Bastille, DJ et producteur français de musique électronique.">
+  <meta name="twitter:image" content="https://vincentbastille.online/a-dramatic-studio-portrait-photograph-of_1Z3UG7AvT3yhOnKlIuTgeA_NJlwurn0T8yjR68TR1gnWw%20(1)%20copie.jpeg">
 
   <!-- JSON-LD Person -->
   <script type="application/ld+json">
@@ -37,6 +40,7 @@
     "jobTitle": "DJ, compositeur, producteur, réalisateur, entrepreneur culturel",
     "description": "DJ et producteur français de house, drum & bass, ambient et electronica, réalisateur des films Mystic et Le Lac, fondateur de Spectra Media AI, Vinyles Store France et Vinyles Power.",
     "url": "https://vincentbastille.online",
+    "image": "https://vincentbastille.online/a-dramatic-studio-portrait-photograph-of_1Z3UG7AvT3yhOnKlIuTgeA_NJlwurn0T8yjR68TR1gnWw%20(1)%20copie.jpeg",
     "birthPlace": {
       "@type": "Place",
       "name": "Le Mans, France"
@@ -47,7 +51,9 @@
       "https://open.spotify.com/intl-fr/artist/2QS54zBHMU8zdaRs1pQRF0",
       "https://www.youtube.com/@vincentbastille",
       "https://spectramedia.gumroad.com",
-      "https://le-lac2026.vercel.app"
+      "https://le-lac2026.vercel.app",
+      "https://vincentbastille-music-for-films-and.onrender.com",
+      "https://french-electronic-revolution.onrender.com"
     ],
     "affiliation": [
       {
@@ -126,10 +132,8 @@
       --link:#38bdf8;
       --border:#1f2937;
       --accent:#f97316;
-      --accent-soft:#0f172a;
       --button-bg:#f97316;
       --button-text:#0b1120;
-      --pill-bg:#0b1120;
     }
     *{box-sizing:border-box;}
     html,body{
@@ -150,7 +154,6 @@
       grid-gap:28px;
     }
 
-    /* HEADER HERO */
     header.hero{
       position:relative;
       padding:22px 20px 22px;
@@ -301,7 +304,6 @@
       box-shadow:0 14px 28px rgba(15,23,42,0.65);
     }
 
-    /* Infobox / sidebar */
     aside{
       position:relative;
     }
@@ -336,6 +338,19 @@
       width:38%;
       color:var(--muted);
       font-weight:500;
+    }
+    .portrait-wrapper{
+      padding:.5rem;
+      text-align:center;
+      background:rgba(15,23,42,0.98);
+    }
+    .portrait-img{
+      width:100%;
+      height:auto;
+      max-height:260px;
+      object-fit:cover;
+      border-radius:14px;
+      display:block;
     }
 
     .badge-stack{
@@ -444,7 +459,10 @@
 
         <h3>Bandes originales &amp; travaux à l’image</h3>
         <ul>
-          <li><strong>Mystic (BO)</strong> — bande originale du film <em>Mystic</em>, centrée sur la tension, le hors-champ et la suggestion sonore.</li>
+          <li><strong>Mystic (BO)</strong> — bande originale du film <em>Mystic</em>, centrée sur la tension, le hors-champ et la suggestion sonore.<br>
+            Site dédié musique de films :  
+            <a href="https://vincentbastille-music-for-films-and.onrender.com" target="_blank" rel="noopener">vincentbastille-music-for-films-and.onrender.com</a>
+          </li>
           <li><strong>Le Lac</strong> — création musicale pour le moyen métrage du même nom, avec enregistrements d’hydrophones, ambiances aquatiques et travail sur la résonance des espaces.</li>
         </ul>
 
@@ -482,11 +500,18 @@
         <h2>Sites &amp; projets en ligne</h2>
         <p>Certains projets musicaux, cinématographiques et IA disposent de sites dédiés ou de landing pages spécifiques&nbsp;:</p>
         <ul>
-          <li><strong>Site officiel &amp; dossiers films</strong> — <a href="https://le-lac2026.vercel.app" target="_blank" rel="noopener">Le Lac (dossier interactif)</a></li>
-          <!-- TODO : remplace les liens ci-dessous par tes URLs Render/Vercel exactes -->
-          <li><strong>OST &amp; bandes originales</strong> — <a href="#" onclick="return false;">(ajouter ici le lien Render de ta landing Mystic / OST)</a></li>
-          <li><strong>Top 100 / sélections électroniques</strong> — <a href="#" onclick="return false;">(ajouter ici le lien Render / Vercel correspondant)</a></li>
-          <li><strong>Projets Spectra Media AI</strong> — <a href="https://spectramedia.gumroad.com" target="_blank" rel="noopener">spectramedia.gumroad.com</a></li>
+          <li><strong>Le Lac — dossier interactif</strong> :  
+            <a href="https://le-lac2026.vercel.app" target="_blank" rel="noopener">https://le-lac2026.vercel.app</a>
+          </li>
+          <li><strong>Music for Films &amp; Mystic</strong> — sélection BO, ambiances et musiques de films :  
+            <a href="https://vincentbastille-music-for-films-and.onrender.com" target="_blank" rel="noopener">https://vincentbastille-music-for-films-and.onrender.com</a>
+          </li>
+          <li><strong>French Electronic Revolution</strong> — sélection de titres et vision électronique française :  
+            <a href="https://french-electronic-revolution.onrender.com" target="_blank" rel="noopener">https://french-electronic-revolution.onrender.com</a>
+          </li>
+          <li><strong>Projets Spectra Media AI</strong> — bots, IA et outils créatifs :  
+            <a href="https://spectramedia.gumroad.com" target="_blank" rel="noopener">https://spectramedia.gumroad.com</a>
+          </li>
         </ul>
         <p class="small">vincentbastille.online agit comme un <strong>hub central</strong> reliant les différents sites de projets (musique, films, IA, danse).</p>
       </section>
@@ -510,6 +535,13 @@
     <aside>
       <table class="infobox" aria-label="Fiche biographique de Vincent Bastille">
         <caption>Vincent Bastille</caption>
+        <tr>
+          <td colspan="2" class="portrait-wrapper">
+            <img src="a-dramatic-studio-portrait-photograph-of_1Z3UG7AvT3yhOnKlIuTgeA_NJlwurn0T8yjR68TR1gnWw (1) copie.jpeg"
+                 alt="Portrait de Vincent Bastille, DJ et compositeur français."
+                 class="portrait-img">
+          </td>
+        </tr>
         <tr><th>Nom de naissance</th><td>Vincent Letort</td></tr>
         <tr><th>Nom d'artiste</th><td>Vincent Bastille</td></tr>
         <tr><th>Ville d’ancrage</th><td>Le Mans, France</td></tr>
