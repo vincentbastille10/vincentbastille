@@ -437,6 +437,131 @@
       color:var(--muted);
     }
 
+    /* ============================
+       BOOKING DJ (haut de page)
+       ============================ */
+    .booking-card{
+      margin-top:16px;
+      background:rgba(15,23,42,0.92);
+      border-radius:18px;
+      border:1px solid rgba(148,163,184,0.38);
+      box-shadow:0 18px 45px rgba(15,23,42,0.85);
+      padding:16px;
+    }
+    .booking-head{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:10px;
+    }
+    .booking-title{
+      margin:0;
+      font-size:1.25rem;
+    }
+    .booking-sub{
+      margin:.2rem 0 0;
+      color:var(--muted);
+      font-size:.92rem;
+      max-width:760px;
+    }
+    .booking-badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.35rem;
+      justify-content:flex-end;
+    }
+    .booking-badge{
+      font-size:.75rem;
+      padding:.18rem .5rem;
+      border-radius:999px;
+      background:rgba(15,23,42,0.95);
+      border:1px solid rgba(75,85,99,0.9);
+      color:var(--muted);
+      white-space:nowrap;
+    }
+    .booking-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:10px;
+      margin-top:10px;
+    }
+    .booking-grid .full{grid-column:1 / -1;}
+    .booking-label{
+      display:block;
+      text-align:left;
+      font-size:.83rem;
+      color:var(--muted);
+      margin:0 0 6px;
+    }
+    .booking-input, .booking-select, .booking-textarea{
+      width:100%;
+      border-radius:12px;
+      border:1px solid rgba(55,65,81,0.9);
+      background:rgba(2,6,23,0.6);
+      color:var(--text);
+      padding:10px 12px;
+      outline:none;
+    }
+    .booking-input:focus, .booking-select:focus, .booking-textarea:focus{
+      border-color:rgba(249,115,22,0.85);
+      box-shadow:0 0 0 3px rgba(249,115,22,0.18);
+    }
+    .booking-textarea{min-height:110px;resize:vertical;}
+    .booking-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      justify-content:space-between;
+      margin-top:12px;
+    }
+    .booking-note{
+      color:var(--muted);
+      font-size:.86rem;
+    }
+    .btn-booking{
+      background:radial-gradient(circle at 10% 0%,#facc15 0,#f97316 38%,#dc2626 100%);
+      color:var(--button-text);
+      border:1px solid transparent;
+      padding:.6rem 1.05rem;
+      border-radius:999px;
+      font-weight:600;
+      cursor:pointer;
+      transition:transform .15s ease-out;
+    }
+    .btn-booking:hover{transform:translateY(-1px);text-decoration:none;}
+    .booking-mini{
+      margin-top:10px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .booking-mini a{
+      color:var(--text);
+      text-decoration:none;
+      border-bottom:1px dashed rgba(148,163,184,0.5);
+    }
+    .booking-mini a:hover{
+      color:var(--accent);
+      border-bottom-color:var(--accent);
+    }
+    .booking-proof{
+      margin-top:10px;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid rgba(55,65,81,0.9);
+      background:rgba(2,6,23,0.45);
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .booking-proof strong{color:var(--text);}
+    .booking-proof .small{margin:0;}
     @media(max-width:960px){
       .page{display:block;padding:20px 12px 52px;}
       aside{margin-top:24px;}
@@ -445,6 +570,8 @@
       nav.toc{margin-top:.85rem;}
       .cta-strip{flex-direction:column;align-items:flex-start;}
       .cta-buttons{margin-left:0;}
+      .booking-grid{grid-template-columns:1fr;}
+      .booking-badges{justify-content:flex-start;}
     }
   </style>
 </head>
@@ -468,13 +595,17 @@
               <strong>Écouter maintenant :</strong> plus de 400 titres, albums, EPs, remixes et bandes originales.
             </div>
             <div class="cta-buttons">
-              <a class="btn btn-primary" href="https://open.spotify.com/intl-fr/artist/2QS54zBHMU8zdaRs1pQRF0" rel="noopener" target="_blank">Play sur Spotify</a>
+              <!-- BOOKING (prioritaire) -->
+              <a class="btn btn-primary" href="#booking">Demande de booking DJ</a>
+
+              <a class="btn btn-outline" href="https://open.spotify.com/intl-fr/artist/2QS54zBHMU8zdaRs1pQRF0" rel="noopener" target="_blank">Play sur Spotify</a>
               <a class="btn btn-outline" href="https://vincentbastille.bandcamp.com" rel="noopener" target="_blank">Catalogue complet Bandcamp</a>
             </div>
           </div>
 
           <nav class="toc" aria-label="Plan du site">
             <span>Explorer :</span>
+            <a href="#booking">Booking</a>
             <a href="#highlights">Highlights</a>
             <a href="#jlo-remix">Remix JLo</a>
             <a href="#madonna-remix">Remix Madonna</a>
@@ -490,6 +621,127 @@
           </nav>
         </div>
       </header>
+
+      <!-- ============================
+           BOOKING DJ (bloc haut)
+           ============================ -->
+      <section id="booking" class="booking-card" aria-label="Demande de booking DJ">
+        <div class="booking-head">
+          <div>
+            <h2 class="booking-title">Demande de booking DJ</h2>
+            <p class="booking-sub">
+              Pour une soirée privée, club, festival ou événement entreprise — en France ou à l’international.
+              Donnez l’essentiel : <strong>date</strong>, <strong>lieu</strong>, <strong>format</strong>, <strong>budget</strong>.
+            </p>
+          </div>
+          <div class="booking-badges" aria-hidden="true">
+            <span class="booking-badge">House / Disco House</span>
+            <span class="booking-badge">Tech House</span>
+            <span class="booking-badge">Drum &amp; Bass</span>
+            <span class="booking-badge">Worldwide</span>
+          </div>
+        </div>
+
+        <!-- Proof mondial (Bandcamp track) -->
+        <div class="booking-proof">
+          <p class="small">
+            <strong>Écoute mondiale :</strong> Michael Jackson — “You Rock My World” (Vincent Bastille Disco House Remix) sur Bandcamp
+          </p>
+          <p class="small">
+            <a href="https://vincentbastille.bandcamp.com/track/michael-jackson-you-rock-my-world-vincent-bastille-disco-house-remix" target="_blank" rel="noopener">
+              Écouter le titre →
+            </a>
+          </p>
+        </div>
+
+        <!-- Formulaire MAILTO (sans backend) -->
+        <form action="mailto:vincentbastille100@gmail.com" method="post" enctype="text/plain">
+          <div class="booking-grid">
+            <div>
+              <label class="booking-label" for="bk_name">Nom / Structure</label>
+              <input class="booking-input" id="bk_name" name="Nom / Structure" type="text" required placeholder="Ex : Festival X / Club Y / Prénom Nom">
+            </div>
+
+            <div>
+              <label class="booking-label" for="bk_email">Email</label>
+              <input class="booking-input" id="bk_email" name="Email" type="email" required placeholder="Ex : booking@...">
+            </div>
+
+            <div>
+              <label class="booking-label" for="bk_date">Date</label>
+              <input class="booking-input" id="bk_date" name="Date" type="date" required>
+            </div>
+
+            <div>
+              <label class="booking-label" for="bk_location">Lieu (ville + salle)</label>
+              <input class="booking-input" id="bk_location" name="Lieu" type="text" required placeholder="Ex : Paris — Rex Club / Le Mans — ...">
+            </div>
+
+            <div>
+              <label class="booking-label" for="bk_type">Type d’événement</label>
+              <select class="booking-select" id="bk_type" name="Type d’événement" required>
+                <option value="" selected disabled>Choisir…</option>
+                <option>Soirée privée</option>
+                <option>Club</option>
+                <option>Festival</option>
+                <option>Événement entreprise</option>
+                <option>After / showcase</option>
+                <option>Autre</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="booking-label" for="bk_budget">Budget (fourchette)</label>
+              <input class="booking-input" id="bk_budget" name="Budget" type="text" placeholder="Ex : 800€ – 1200€ (cachet + frais)">
+            </div>
+
+            <div>
+              <label class="booking-label" for="bk_set">Durée / format</label>
+              <select class="booking-select" id="bk_set" name="Durée / format" required>
+                <option value="" selected disabled>Choisir…</option>
+                <option>DJ set (1h)</option>
+                <option>DJ set (1h30)</option>
+                <option>DJ set (2h)</option>
+                <option>DJ set (3h+)</option>
+                <option>Live / hybride (à préciser)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="booking-label" for="bk_style">Style souhaité</label>
+              <select class="booking-select" id="bk_style" name="Style souhaité" required>
+                <option value="" selected disabled>Choisir…</option>
+                <option>House / Disco House</option>
+                <option>Tech House</option>
+                <option>Drum &amp; Bass / Liquid</option>
+                <option>Ambient / Electronica</option>
+                <option>Sur mesure (à préciser)</option>
+              </select>
+            </div>
+
+            <div class="full">
+              <label class="booking-label" for="bk_details">Détails (horaires, line-up, conditions, matériel, infos utiles)</label>
+              <textarea class="booking-textarea" id="bk_details" name="Détails" placeholder="Ex : horaires, line-up, public, sonorisation, DJ booth, transport/hébergement, facture, contact sur place…"></textarea>
+            </div>
+          </div>
+
+          <div class="booking-actions">
+            <button class="btn-booking" type="submit">Envoyer la demande</button>
+            <div class="booking-note">
+              Contact direct : <a href="mailto:vincentbastille100@gmail.com">vincentbastille100@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="booking-mini">
+            <div class="small">Astuce : date + lieu + budget = réponse plus rapide.</div>
+            <div class="small">
+              <a href="mailto:vincentbastille100@gmail.com?subject=Booking%20DJ%20%E2%80%94%20Vincent%20Bastille">
+                Ouvrir un email “Booking DJ”
+              </a>
+            </div>
+          </div>
+        </form>
+      </section>
 
       <!-- HIGHLIGHTS -->
       <section id="highlights" class="section-card">
@@ -687,9 +939,12 @@
           <li><strong>Hub Spectra Media</strong> — projets IA, bots, veille et innovation :  
             <a href="https://www.spectramedia.online/" target="_blank" rel="noopener">https://www.spectramedia.online/</a>
           </li>
+
+          <!-- ✅ CORRECTION : lien "Le Lac" réparé -->
           <li><strong>Le Lac — dossier interactif</strong> :  
             <a href="https://le-lac2026.vercel.app" target="_blank" rel="noopener">https://le-lac2026.vercel.app</a>
           </li>
+
           <li><strong>Music for Films &amp; Mystic</strong> — sélection BO, ambiances et musiques de films :  
             <a href="https://vincentbastille-music-for-films-and.onrender.com/" target="_blank" rel="noopener">https://vincentbastille-music-for-films-and.onrender.com/</a>
           </li>
@@ -755,7 +1010,44 @@
         <p>Pour toute demande professionnelle (synchronisation, commande de musique originale, scénographie, projets IA ou collaborations) :</p>
         <p><strong>Email :</strong> <a href="mailto:vincentbastille100@gmail.com">vincentbastille100@gmail.com</a></p>
       </section>
-    </div>
+
+      <!-- ✅ CORRECTION : ce bloc est maintenant DANS .content (colonne gauche) -->
+      <section style="margin:80px auto 60px; padding:0 20px; text-align:center;">
+        <div style="
+          display:inline-block;
+          max-width:720px;
+          width:100%;
+          padding:32px 24px;
+          border-radius:20px;
+          background:linear-gradient(135deg, #111827, #1f2937, #0f172a);
+          box-shadow:0 22px 45px rgba(0,0,0,0.7);
+          border:1px solid rgba(255,255,255,0.08);
+        ">
+          <h2 style="font-size:26px; margin-bottom:12px; color:#ffffff;">
+            Univers étendu Spectra Media
+          </h2>
+          <p style="font-size:15px; margin-bottom:26px; color:#e5e7eb;">
+            Musique, films, IA, expériences immersives : explorez tout l’écosystème créatif autour de Vincent Bastille.
+          </p>
+          <a href="https://group1-6y79.onrender.com/"
+             style="
+               display:inline-block;
+               padding:14px 30px;
+               border-radius:999px;
+               background:linear-gradient(135deg,#ec4899,#8b5cf6);
+               color:#ffffff;
+               text-decoration:none;
+               font-weight:600;
+               font-size:15px;
+               letter-spacing:0.03em;
+               box-shadow:0 14px 30px rgba(236,72,153,0.55);
+             ">
+            ✨ Accéder à Spectra Media
+          </a>
+        </div>
+      </section>
+
+    </div><!-- /.content -->
 
     <aside>
       <table class="infobox" aria-label="Fiche biographique de Vincent Bastille">
@@ -792,41 +1084,7 @@
         <div class="badge">Spectra Media AI</div>
       </div>
     </aside>
-<section style="margin:80px auto 60px; padding:0 20px; text-align:center;">
-  <div style="
-    display:inline-block;
-    max-width:720px;
-    width:100%;
-    padding:32px 24px;
-    border-radius:20px;
-    background:linear-gradient(135deg, #111827, #1f2937, #0f172a);
-    box-shadow:0 22px 45px rgba(0,0,0,0.7);
-    border:1px solid rgba(255,255,255,0.08);
-  ">
-    <h2 style="font-size:26px; margin-bottom:12px; color:#ffffff;">
-      Univers étendu Spectra Media
-    </h2>
-    <p style="font-size:15px; margin-bottom:26px; color:#e5e7eb;">
-      Musique, films, IA, expériences immersives : explorez tout l’écosystème créatif autour de Vincent Bastille.
-    </p>
-    <a href="https://group1-6y79.onrender.com/"
-       style="
-         display:inline-block;
-         padding:14px 30px;
-         border-radius:999px;
-         background:linear-gradient(135deg,#ec4899,#8b5cf6);
-         color:#ffffff;
-         text-decoration:none;
-         font-weight:600;
-         font-size:15px;
-         letter-spacing:0.03em;
-         box-shadow:0 14px 30px rgba(236,72,153,0.55);
-       ">
-      ✨ Accéder à Spectra Media
-    </a>
-  </div>
-</section>
 
-  </div>
+  </div><!-- /.page -->
 </body>
 </html>
