@@ -562,6 +562,51 @@
     }
     .booking-proof strong{color:var(--text);}
     .booking-proof .small{margin:0;}
+
+    /* ===== FB REELS (responsive) ===== */
+    .video-card{
+      margin-top:16px;
+      background:rgba(15,23,42,0.92);
+      border-radius:18px;
+      border:1px solid rgba(148,163,184,0.38);
+      box-shadow:0 18px 45px rgba(15,23,42,0.85);
+      padding:16px;
+    }
+    .video-head{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:10px;
+    }
+    .video-title{
+      margin:0;
+      font-size:1.25rem;
+    }
+    .video-sub{
+      margin:.2rem 0 0;
+      color:var(--muted);
+      font-size:.92rem;
+      max-width:760px;
+    }
+    .video-frame{
+      position:relative;
+      width:100%;
+      padding-bottom:56.25%; /* 16:9 */
+      height:0;
+      overflow:hidden;
+      border-radius:14px;
+      border:1px solid rgba(148,163,184,0.35);
+      background:rgba(2,6,23,0.5);
+    }
+    .video-frame iframe{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
+    }
+
     @media(max-width:960px){
       .page{display:block;padding:20px 12px 52px;}
       aside{margin-top:24px;}
@@ -586,7 +631,7 @@
           </div>
           <h1>Vincent Bastille</h1>
           <p class="hero-tagline">
-            DJ, compositeur, réalisateur et artisan du son — entre house, drum &amp; bass, ambient et electronica cinématographique.  
+            DJ, compositeur, réalisateur et artisan du son — entre house, drum &amp; bass, ambient et electronica cinématographique.
             De Bercy à Ibiza, des remixes pour Jennifer Lopez &amp; Madonna aux bandes originales de films, en passant par la danse et l’IA.
           </p>
 
@@ -605,6 +650,7 @@
 
           <nav class="toc" aria-label="Plan du site">
             <span>Explorer :</span>
+            <a href="#showreel">Showreel</a>
             <a href="#booking">Booking</a>
             <a href="#highlights">Highlights</a>
             <a href="#jlo-remix">Remix JLo</a>
@@ -621,6 +667,45 @@
           </nav>
         </div>
       </header>
+
+      <!-- ============================
+           SHOWREEL (ULTRA HAUT DE PAGE)
+           ============================ -->
+      <section id="showreel" class="video-card" aria-label="Showreel booking">
+        <div class="video-head">
+          <div>
+            <h2 class="video-title">Showreel — DJ set (extrait)</h2>
+            <p class="video-sub">
+              Un aperçu direct de l’énergie, du style et de la vibe — si tu veux me booker, c’est ici que ça se décide.
+            </p>
+          </div>
+          <div class="booking-badges" aria-hidden="true">
+            <span class="booking-badge">Impact club</span>
+            <span class="booking-badge">House / Tech House</span>
+            <span class="booking-badge">Booking ready</span>
+          </div>
+        </div>
+
+        <div class="video-frame">
+          <iframe
+            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1618482385532031&show_text=false"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            allowfullscreen="true"
+            loading="lazy"
+            title="Vincent Bastille — Showreel booking (Facebook Reel)">
+          </iframe>
+        </div>
+
+        <div class="cta-strip" style="margin-top:12px;">
+          <div class="cta-text">
+            <strong>Tu veux un set sur mesure ?</strong> Donne date + lieu + budget → réponse rapide.
+          </div>
+          <div class="cta-buttons">
+            <a class="btn btn-primary" href="#booking">Demande de booking DJ</a>
+            <a class="btn btn-outline" href="mailto:vincentbastille100@gmail.com?subject=Booking%20DJ%20%E2%80%94%20Vincent%20Bastille" rel="noopener">Email direct</a>
+          </div>
+        </div>
+      </section>
 
       <!-- ============================
            BOOKING DJ (bloc haut)
@@ -782,7 +867,7 @@
           <strong>Jennifer Lopez – “I Can’t Get Enough”</strong>, dans une version club taillée pour le dancefloor.
         </p>
         <p>
-          Le morceau a généré plus de <strong>3,5 millions de vues</strong> cumulées en ligne.  
+          Le morceau a généré plus de <strong>3,5 millions de vues</strong> cumulées en ligne.
           Vous pouvez l’écouter directement ici via Spotify :
         </p>
 
@@ -879,7 +964,7 @@
         <h3>Bandes originales &amp; travaux à l’image</h3>
         <ul>
           <li><strong>Mystic (BO)</strong> — bande originale du film <em>Mystic</em>, centrée sur la tension, le hors-champ et la suggestion sonore.<br>
-            Site dédié musique de films :  
+            Site dédié musique de films :
             <a href="https://vincentbastille-music-for-films-and.onrender.com/" target="_blank" rel="noopener">https://vincentbastille-music-for-films-and.onrender.com/</a>
           </li>
           <li><strong>Le Lac</strong> — création musicale pour le moyen métrage du même nom, avec enregistrements d’hydrophones, ambiances aquatiques et travail sur la résonance des espaces.</li>
@@ -914,7 +999,7 @@
         <p>Depuis plus de <strong>six ans</strong>, Vincent Bastille conçoit des <strong>scénographies vidéo</strong> pour des ballets et spectacles de danse, utilisant le <strong>vidéo projecteur</strong> comme un partenaire de jeu chorégraphique. Il développe un langage visuel basé sur la réaction de l’image au son, qu’il nomme parfois <strong>ADVP (Audio Driven Visual Processing)</strong>.</p>
         <p>Ses collaborations avec des compagnies et écoles de danse intègrent des <strong>créations originales</strong> (musique + visuel), pensées comme des environnements immersifs pour les danseurs et le public.</p>
         <ul>
-          <li><strong>Video for Dancers &amp; Musicians</strong> — captations, montages et créations sur mesure pour la danse et la musique :  
+          <li><strong>Video for Dancers &amp; Musicians</strong> — captations, montages et créations sur mesure pour la danse et la musique :
             <a href="https://video-for-dancers-and-musicians.onrender.com/" target="_blank" rel="noopener">https://video-for-dancers-and-musicians.onrender.com/</a>
           </li>
         </ul>
@@ -924,7 +1009,7 @@
         <h2>Projets IA &amp; Spectra Media AI</h2>
         <p>Avec <strong>Spectra Media AI</strong>, Vincent Bastille développe des projets mêlant <strong>intelligence artificielle</strong>, <strong>agents conversationnels</strong> et création artistique. Parmi ces projets figure notamment <strong>Betty</strong>, une famille de <strong>chatbots métiers</strong> destinés aux petites entreprises, ainsi que des systèmes de veille automatisée sur les innovations en IA.</p>
         <p>Ces travaux prolongent sa recherche sur la <strong>relation homme-machine</strong>, la médiation technologique dans la création et la manière dont les outils d’IA peuvent devenir des partenaires de travail dans la musique, le cinéma et la scénographie.</p>
-        <p>Site principal Spectra Media AI :  
+        <p>Site principal Spectra Media AI :
           <a href="https://www.spectramedia.online/" target="_blank" rel="noopener">https://www.spectramedia.online/</a>
         </p>
       </section>
@@ -933,31 +1018,28 @@
         <h2>Sites &amp; projets en ligne</h2>
         <p>Certains projets musicaux, cinématographiques et IA disposent de sites dédiés ou de landing pages spécifiques&nbsp;:</p>
         <ul>
-          <li><strong>Site officiel Vincent Bastille</strong> — hub artiste (biographie, remixes, discographie) :  
+          <li><strong>Site officiel Vincent Bastille</strong> — hub artiste (biographie, remixes, discographie) :
             <a href="https://www.vincentbastille.online/" target="_blank" rel="noopener">https://www.vincentbastille.online/</a>
           </li>
-          <li><strong>Hub Spectra Media</strong> — projets IA, bots, veille et innovation :  
+          <li><strong>Hub Spectra Media</strong> — projets IA, bots, veille et innovation :
             <a href="https://www.spectramedia.online/" target="_blank" rel="noopener">https://www.spectramedia.online/</a>
           </li>
-
-          <!-- ✅ CORRECTION : lien "Le Lac" réparé -->
-          <li><strong>Le Lac — dossier interactif</strong> :  
+          <li><strong>Le Lac — dossier interactif</strong> :
             <a href="https://le-lac2026.vercel.app" target="_blank" rel="noopener">https://le-lac2026.vercel.app</a>
           </li>
-
-          <li><strong>Music for Films &amp; Mystic</strong> — sélection BO, ambiances et musiques de films :  
+          <li><strong>Music for Films &amp; Mystic</strong> — sélection BO, ambiances et musiques de films :
             <a href="https://vincentbastille-music-for-films-and.onrender.com/" target="_blank" rel="noopener">https://vincentbastille-music-for-films-and.onrender.com/</a>
           </li>
-          <li><strong>Video for Dancers &amp; Musicians</strong> — captations et montages pour danseurs et musiciens :  
+          <li><strong>Video for Dancers &amp; Musicians</strong> — captations et montages pour danseurs et musiciens :
             <a href="https://video-for-dancers-and-musicians.onrender.com/" target="_blank" rel="noopener">https://video-for-dancers-and-musicians.onrender.com/</a>
           </li>
-          <li><strong>Your Own Remix</strong> — service de remix sur mesure pour artistes et labels :  
+          <li><strong>Your Own Remix</strong> — service de remix sur mesure pour artistes et labels :
             <a href="https://your-own-remix.onrender.com/" target="_blank" rel="noopener">https://your-own-remix.onrender.com/</a>
           </li>
-          <li><strong>French Electronic Revolution</strong> — sélection de titres et vision électronique française :  
+          <li><strong>French Electronic Revolution</strong> — sélection de titres et vision électronique française :
             <a href="https://french-electronic-revolution.onrender.com" target="_blank" rel="noopener">https://french-electronic-revolution.onrender.com</a>
           </li>
-          <li><strong>Projets Spectra Media AI</strong> — bots, IA et outils créatifs :  
+          <li><strong>Projets Spectra Media AI</strong> — bots, IA et outils créatifs :
             <a href="https://spectramedia.gumroad.com" target="_blank" rel="noopener">https://spectramedia.gumroad.com</a>
           </li>
         </ul>
@@ -967,10 +1049,24 @@
       <section id="videos" class="section-card">
         <h2>Vidéos &amp; performances</h2>
 
+        <p><strong>Wondering Stars — Drum &amp; Bass (album / vidéo)</strong></p>
+        <div class="video-frame" style="margin-bottom:1rem;">
+          <iframe
+            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F25386132554422920&show_text=false"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            allowfullscreen="true"
+            loading="lazy"
+            title="Wondering Stars — Drum &amp; Bass (Facebook Reel)">
+          </iframe>
+        </div>
+        <p class="small">
+          <strong>Wondering Stars</strong> : liquid drum &amp; bass + atmosphères ciné — un projet pensé comme un voyage.
+        </p>
+
         <p><strong>Clip officiel – MYSTIC</strong></p>
 
         <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;border:1px solid rgba(148,163,184,0.4);box-shadow:0 8px 24px rgba(0,0,0,0.4);margin-bottom:1rem;">
-          <iframe 
+          <iframe
             src="https://www.youtube.com/embed/-0GRAbVrjR0"
             title="Vincent Bastille – Mystic (Film / BO)"
             frameborder="0"
@@ -995,7 +1091,7 @@
         <p>Clips, extraits de films, performances live et expérimentations visuelles sont regroupés sur la chaîne YouTube officielle :</p>
         <ul>
           <li>
-            Chaîne YouTube : 
+            Chaîne YouTube :
             <a href="https://www.youtube.com/@vincentbastillle" rel="noopener" target="_blank">
               https://www.youtube.com/@vincentbastillle
             </a>
