@@ -1,28 +1,1060 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>DJ Le Mans – Vincent Bastille</title>
-  <meta name="description" content="DJ professionnel au Mans. Mariage, soirée, anniversaire. Contact rapide.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>DJ Le Mans – Vincent Bastille | DJ professionnel soirées, entreprises, festivals</title>
+  <meta name="description" content="DJ Le Mans : Vincent Bastille anime soirées d’entreprise, bars, clubs, festivals, anniversaires et mariages au Mans et en Sarthe. House, pop, rock, disco, années 80. Appel direct, WhatsApp, devis gratuit." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="Vincent Bastille" />
+  <meta name="theme-color" content="#0b0b0f" />
+
+  <link rel="canonical" href="https://www.vincentbastille.online/dj-le-mans.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DJ Le Mans – Vincent Bastille" />
+  <meta property="og:description" content="DJ professionnel au Mans pour entreprises, festivals, bars, clubs, anniversaires et mariages. House, pop, rock, disco, années 80." />
+  <meta property="og:url" content="https://www.vincentbastille.online/dj-le-mans.html" />
+  <meta property="og:site_name" content="Vincent Bastille" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DJ Le Mans – Vincent Bastille" />
+  <meta name="twitter:description" content="DJ professionnel au Mans pour soirées privées, entreprises, festivals, bars et mariages." />
+
+  <style>
+    :root{
+      --bg:#0b0b0f;
+      --bg-soft:#13131a;
+      --card:#171721;
+      --text:#f5f7fb;
+      --muted:#bcc3d1;
+      --line:rgba(255,255,255,.12);
+      --accent:#b28cff;
+      --accent-2:#6ee7ff;
+      --accent-3:#ffd86b;
+      --ok:#9cffb0;
+      --shadow:0 12px 40px rgba(0,0,0,.28);
+      --radius:18px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(178,140,255,.14), transparent 35%),
+        radial-gradient(circle at top right, rgba(110,231,255,.10), transparent 28%),
+        linear-gradient(180deg, #0b0b0f 0%, #101018 100%);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .container{
+      width:min(var(--max), calc(100% - 32px));
+      margin:0 auto;
+    }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(10px);
+      background:rgba(11,11,15,.72);
+      border-bottom:1px solid var(--line);
+    }
+
+    .topbar-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:12px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:700;
+      letter-spacing:.2px;
+    }
+
+    .brand-badge{
+      width:12px;
+      height:12px;
+      border-radius:50%;
+      background:linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow:0 0 18px rgba(178,140,255,.55);
+    }
+
+    .nav{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .hero{
+      padding:72px 0 42px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:28px;
+      align-items:stretch;
+    }
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .hero-copy{
+      padding:34px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--muted);
+      font-size:.92rem;
+      margin-bottom:18px;
+      background:rgba(255,255,255,.03);
+    }
+
+    .eyebrow-dot{
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:var(--ok);
+      box-shadow:0 0 14px rgba(156,255,176,.6);
+    }
+
+    h1,h2,h3{
+      line-height:1.15;
+      margin:0 0 16px;
+      letter-spacing:-.02em;
+    }
+
+    h1{
+      font-size:clamp(2.1rem, 4.3vw, 4.2rem);
+      max-width:14ch;
+    }
+
+    h2{
+      font-size:clamp(1.55rem, 2.2vw, 2.2rem);
+    }
+
+    h3{
+      font-size:1.15rem;
+    }
+
+    .lead{
+      font-size:1.12rem;
+      color:var(--muted);
+      max-width:62ch;
+      margin:0 0 22px;
+    }
+
+    .lead strong{
+      color:var(--text);
+    }
+
+    .hero-points{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:12px;
+      margin:24px 0 30px;
+    }
+
+    .hero-point{
+      display:flex;
+      gap:10px;
+      padding:14px 14px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:rgba(255,255,255,.025);
+      color:var(--muted);
+    }
+
+    .hero-point strong{
+      color:var(--text);
+      display:block;
+      margin-bottom:4px;
+    }
+
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:6px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:52px;
+      padding:0 18px;
+      border-radius:14px;
+      font-weight:700;
+      border:1px solid transparent;
+      transition:.18s ease;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg, var(--accent), #8f6aff);
+      color:#fff;
+      box-shadow:0 10px 24px rgba(143,106,255,.28);
+    }
+
+    .btn-secondary{
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      border-color:var(--line);
+    }
+
+    .btn-tertiary{
+      background:linear-gradient(135deg, rgba(110,231,255,.16), rgba(255,216,107,.14));
+      color:var(--text);
+      border-color:rgba(255,255,255,.08);
+    }
+
+    .hero-side{
+      padding:24px;
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+
+    .side-box{
+      padding:20px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:rgba(255,255,255,.025);
+    }
+
+    .side-box p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .kpi{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:12px;
+    }
+
+    .kpi .side-box strong{
+      display:block;
+      font-size:1.4rem;
+      margin-bottom:4px;
+      color:var(--text);
+    }
+
+    section{
+      padding:26px 0;
+    }
+
+    .section-head{
+      max-width:72ch;
+      margin-bottom:20px;
+    }
+
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:18px;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:18px;
+    }
+
+    .feature{
+      padding:22px;
+    }
+
+    .feature p,
+    .service p,
+    .review p,
+    .faq-item p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .service{
+      padding:22px;
+    }
+
+    .service ul{
+      margin:12px 0 0;
+      padding-left:18px;
+      color:var(--muted);
+    }
+
+    .band{
+      margin:18px 0 8px;
+      padding:18px 20px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:linear-gradient(135deg, rgba(178,140,255,.10), rgba(110,231,255,.08));
+      color:var(--text);
+      font-weight:700;
+    }
+
+    .zones{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:14px;
+    }
+
+    .zone{
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      color:var(--muted);
+      font-size:.94rem;
+    }
+
+    .review{
+      padding:22px;
+    }
+
+    .review strong{
+      display:block;
+      margin-bottom:10px;
+      color:var(--text);
+    }
+
+    .review .stars{
+      color:var(--accent-3);
+      letter-spacing:2px;
+      margin-bottom:8px;
+    }
+
+    .faq{
+      display:grid;
+      gap:14px;
+    }
+
+    .faq-item{
+      padding:18px 20px;
+    }
+
+    .faq-item h3{
+      margin-bottom:8px;
+    }
+
+    .contact-wrap{
+      display:grid;
+      grid-template-columns:1fr .95fr;
+      gap:18px;
+      align-items:start;
+    }
+
+    .contact-card{
+      padding:24px;
+    }
+
+    .contact-list{
+      display:grid;
+      gap:12px;
+      margin-top:16px;
+    }
+
+    .contact-item{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      padding:14px 16px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:rgba(255,255,255,.025);
+      color:var(--muted);
+    }
+
+    .contact-item strong{
+      color:var(--text);
+      display:block;
+      margin-bottom:2px;
+    }
+
+    form{
+      display:grid;
+      gap:12px;
+      margin-top:8px;
+    }
+
+    .field{
+      display:grid;
+      gap:6px;
+    }
+
+    label{
+      font-size:.95rem;
+      color:var(--muted);
+      font-weight:700;
+    }
+
+    input, textarea, select{
+      width:100%;
+      background:#0e1016;
+      color:var(--text);
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:14px 14px;
+      font:inherit;
+      outline:none;
+    }
+
+    textarea{
+      min-height:140px;
+      resize:vertical;
+    }
+
+    input:focus, textarea:focus, select:focus{
+      border-color:rgba(178,140,255,.65);
+      box-shadow:0 0 0 4px rgba(178,140,255,.10);
+    }
+
+    .fine{
+      font-size:.88rem;
+      color:var(--muted);
+    }
+
+    footer{
+      padding:28px 0 52px;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .footer-card{
+      padding:20px 22px;
+    }
+
+    .small{
+      font-size:.92rem;
+      color:var(--muted);
+    }
+
+    @media (max-width: 980px){
+      .hero-grid,
+      .grid-3,
+      .grid-2,
+      .contact-wrap{
+        grid-template-columns:1fr;
+      }
+
+      .hero-points,
+      .kpi{
+        grid-template-columns:1fr;
+      }
+
+      .topbar-inner{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+
+      .hero{
+        padding-top:46px;
+      }
+    }
+
+    @media (max-width: 560px){
+      .container{
+        width:min(var(--max), calc(100% - 20px));
+      }
+      .hero-copy,
+      .hero-side,
+      .feature,
+      .service,
+      .review,
+      .contact-card{
+        padding:18px;
+      }
+      .btn{
+        width:100%;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ProfessionalService",
+    "name":"Vincent Bastille - DJ Le Mans",
+    "alternateName":"DJ Le Mans",
+    "url":"https://www.vincentbastille.online/dj-le-mans.html",
+    "telephone":"+33659986750",
+    "email":"vincentbastille100@gmail.com",
+    "address":{
+      "@type":"PostalAddress",
+      "addressLocality":"Le Mans",
+      "addressRegion":"Sarthe",
+      "postalCode":"72000",
+      "addressCountry":"FR"
+    },
+    "areaServed":[
+      "Le Mans",
+      "Sarthe",
+      "Pays de la Loire"
+    ],
+    "priceRange":"€€",
+    "description":"DJ professionnel basé au Mans pour soirées d’entreprise, bars, clubs, festivals, anniversaires, mariages et événements privés.",
+    "sameAs":[
+      "https://www.vincentbastille.online/"
+    ],
+    "serviceType":[
+      "DJ entreprise Le Mans",
+      "DJ festival Le Mans",
+      "DJ anniversaire Le Mans",
+      "DJ mariage Le Mans",
+      "DJ bar et club Le Mans"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Quel type d’événements anime Vincent Bastille au Mans ?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Vincent Bastille anime principalement les soirées d’entreprise, bars, clubs, festivals, anniversaires, mariages et autres événements privés ou publics au Mans et en Sarthe."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Quel style musical propose ce DJ au Mans ?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Vincent Bastille propose une base forte orientée house, tout en s’adaptant au public avec de la pop, du rock, du disco et des classiques années 80 lorsque cela sert l’ambiance de la soirée."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Comment réserver un DJ au Mans rapidement ?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Vous pouvez appeler directement Vincent Bastille au 06 59 98 67 50, envoyer un message WhatsApp ou utiliser le formulaire de contact présent sur cette page."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
-<body style="font-family: Arial; padding: 40px;">
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <span class="brand-badge"></span>
+        <span>DJ Le Mans · Vincent Bastille</span>
+      </div>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#prestations">Prestations</a>
+        <a href="#styles">Styles</a>
+        <a href="#zones">Zones</a>
+        <a href="#avis">Avis</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <h1>DJ Le Mans – Vincent Bastille</h1>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="card hero-copy">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>DJ professionnel au Mans · Entreprises · Festivals · Anniversaires · Mariages</span>
+          </div>
 
-  <p>
-    DJ professionnel basé au Mans, j’anime vos soirées :
-    mariage, anniversaire, événements privés et entreprise.
-  </p>
+          <h1>DJ Le Mans – Vincent Bastille</h1>
 
-  <p>
-    House, disco, années 80, rock – je m’adapte à votre public
-    pour créer une ambiance inoubliable.
-  </p>
+          <p class="lead">
+            Vous cherchez un <strong>DJ au Mans</strong> capable de faire monter l’ambiance sans imposer une playlist figée ?
+            <strong>Vincent Bastille</strong> propose des prestations DJ pour <strong>soirées d’entreprise</strong>, <strong>bars</strong>, <strong>clubs</strong>, <strong>festivals</strong>, <strong>anniversaires</strong>, <strong>mariages</strong> et événements sur mesure au <strong>Mans</strong> et en <strong>Sarthe</strong>.
+          </p>
 
-  <p>
-    📞 <a href="tel:+336XXXXXXXX">Me contacter</a>
-  </p>
+          <p class="lead">
+            Son identité musicale est ancrée dans la <strong>house</strong>, avec une vraie culture de la scène et du public, tout en sachant intégrer avec intelligence <strong>pop</strong>, <strong>rock</strong>, <strong>disco</strong> et <strong>années 80</strong> quand la soirée le demande.
+          </p>
 
+          <div class="hero-points">
+            <div class="hero-point">
+              <div>🎧</div>
+              <div>
+                <strong>Identité + adaptation</strong>
+                Une signature house, sans jamais perdre le public.
+              </div>
+            </div>
+            <div class="hero-point">
+              <div>🏙️</div>
+              <div>
+                <strong>Ancrage local</strong>
+                Basé au Mans, intervention en Sarthe et au-delà selon projet.
+              </div>
+            </div>
+            <div class="hero-point">
+              <div>💼</div>
+              <div>
+                <strong>Priorité entreprise</strong>
+                Soirées corporate, bars, clubs, radios, lancements, festivals.
+              </div>
+            </div>
+            <div class="hero-point">
+              <div>⚡</div>
+              <div>
+                <strong>Contact direct</strong>
+                Appel, WhatsApp, formulaire : réponse simple et rapide.
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="tel:+33659986750">📞 Appeler le 06 59 98 67 50</a>
+            <a class="btn btn-secondary" href="https://wa.me/33659986750" target="_blank" rel="noopener">💬 WhatsApp</a>
+            <a class="btn btn-tertiary" href="#contact">✉️ Demander un devis gratuit</a>
+          </div>
+        </div>
+
+        <aside class="card hero-side" aria-label="Informations rapides">
+          <div class="side-box">
+            <h2 style="font-size:1.3rem; margin-bottom:10px;">Pourquoi choisir Vincent Bastille comme DJ au Mans ?</h2>
+            <p>
+              Parce qu’un bon DJ ne se contente pas de passer des titres. Il lit une salle, comprend un public,
+              ajuste son énergie, fait circuler les styles et transforme une soirée en vrai moment collectif.
+            </p>
+          </div>
+
+          <div class="kpi">
+            <div class="side-box">
+              <strong>Le Mans</strong>
+              <p>Base locale pour vos événements en Sarthe</p>
+            </div>
+            <div class="side-box">
+              <strong>House + open</strong>
+              <p>Identité musicale nette, sans rigidité</p>
+            </div>
+            <div class="side-box">
+              <strong>Pro / Festif</strong>
+              <p>Entreprise, club, bar, festival, anniversaire</p>
+            </div>
+            <div class="side-box">
+              <strong>Devis gratuit</strong>
+              <p>Échange simple pour cadrer la prestation</p>
+            </div>
+          </div>
+
+          <div class="side-box">
+            <p class="small">
+              Vous pouvez aussi découvrir l’univers visuel et des contenus de performance sur
+              <a href="https://www.vincentbastille.online/" target="_blank" rel="noopener" style="text-decoration:underline;">vincentbastille.online</a>.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="prestations">
+      <div class="container">
+        <div class="section-head">
+          <h2>Prestations DJ au Mans : entreprises, festivals, clubs, anniversaires, mariages</h2>
+          <p>
+            Cette page cible la recherche <strong>DJ Le Mans</strong> avec une offre claire. Mais surtout, elle décrit le type de prestations réellement proposées par Vincent Bastille, pour des clients qui veulent à la fois une ambiance forte, une vraie présence musicale et un DJ qui comprend le public.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card service">
+            <h3>DJ entreprise Le Mans</h3>
+            <p>
+              Pour cocktails, soirées corporate, lancements, événements d’équipe, inaugurations ou moments clients.
+            </p>
+            <ul>
+              <li>Ambiance élégante ou énergique selon le brief</li>
+              <li>Montée progressive de la soirée</li>
+              <li>Adaptation au lieu, au timing et au public</li>
+            </ul>
+          </article>
+
+          <article class="card service">
+            <h3>DJ festival Le Mans</h3>
+            <p>
+              Pour scènes locales, événements culturels, open airs, formats hybrides ou programmations plus identitaires.
+            </p>
+            <ul>
+              <li>Orientation house tendance</li>
+              <li>Capacité à tenir une ligne artistique</li>
+              <li>Présence pensée pour un vrai public</li>
+            </ul>
+          </article>
+
+          <article class="card service">
+            <h3>DJ bar & club Le Mans</h3>
+            <p>
+              Pour bars, rooftops, clubs, afterworks, lieux de nuit et établissements cherchant un DJ fiable et incarné.
+            </p>
+            <ul>
+              <li>House, disco house, crossover intelligent</li>
+              <li>Lecture en direct de la salle</li>
+              <li>Énergie, groove, impact</li>
+            </ul>
+          </article>
+
+          <article class="card service">
+            <h3>DJ anniversaire Le Mans</h3>
+            <p>
+              Pour anniversaires adultes, soirées privées, événements familiaux ou célébrations sur mesure.
+            </p>
+            <ul>
+              <li>Playlist vivante, pas automatique</li>
+              <li>Mix de styles selon les générations</li>
+              <li>Objectif : que les gens restent et dansent</li>
+            </ul>
+          </article>
+
+          <article class="card service">
+            <h3>DJ mariage Le Mans</h3>
+            <p>
+              Pour couples cherchant un DJ élégant, musicalement solide et capable de réunir des publics variés.
+            </p>
+            <ul>
+              <li>Ambiance raffinée puis festive</li>
+              <li>Équilibre entre identité et accessibilité</li>
+              <li>Écoute des envies du couple</li>
+            </ul>
+          </article>
+
+          <article class="card service">
+            <h3>Autres formats</h3>
+            <p>
+              Radio, happenings, mode, performances, événements culturels, vernissages, dispositifs spéciaux.
+            </p>
+            <ul>
+              <li>Format adaptable</li>
+              <li>Lecture fine du contexte</li>
+              <li>Approche sur brief et sur mesure</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="band">
+          Requête visée : <strong>DJ Le Mans</strong> · Positionnement différenciant : <strong>identité house + capacité d’adaptation réelle</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="styles">
+      <div class="container">
+        <div class="section-head">
+          <h2>Quel style musical pour votre soirée au Mans ?</h2>
+          <p>
+            Beaucoup de personnes cherchent un <strong>DJ au Mans</strong> en voulant une ambiance forte, mais sans savoir exactement quel style demander. Ici, la réponse est simple : Vincent Bastille a une base <strong>house</strong>, très actuelle, mais sait ouvrir intelligemment la sélection pour faire vivre la soirée.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card feature">
+            <h3>Une vraie base house</h3>
+            <p>
+              La house est aujourd’hui l’un des langages les plus efficaces pour créer une ambiance moderne, élégante et dansante. C’est le cœur de l’identité de Vincent Bastille, notamment pour les bars, clubs, festivals et soirées d’entreprise qui veulent éviter l’effet “playlist générique”.
+            </p>
+          </article>
+
+          <article class="card feature">
+            <h3>Ouverture pop, rock, disco, années 80</h3>
+            <p>
+              Parce qu’un événement réussi ne dépend pas d’un seul style. Selon le public, le lieu et le moment de la soirée, des passerelles peuvent être faites vers la pop, le rock, le disco ou les classiques années 80, sans casser l’unité du set.
+            </p>
+          </article>
+
+          <article class="card feature">
+            <h3>Identité sans rigidité</h3>
+            <p>
+              Le but n’est pas d’imposer une culture musicale fermée, ni de flatter tout le monde sans direction. Le bon équilibre consiste à garder une patte, tout en respectant le public réel présent dans la salle.
+            </p>
+          </article>
+
+          <article class="card feature">
+            <h3>DJ Le Mans pour publics variés</h3>
+            <p>
+              Entreprise, bar, festival, anniversaire ou mariage : l’approche change, le niveau d’ouverture aussi. C’est cette souplesse qui permet de proposer un <strong>DJ professionnel au Mans</strong> crédible sur des formats très différents.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="zones">
+      <div class="container">
+        <div class="section-head">
+          <h2>Zone d’intervention : Le Mans, Sarthe et alentours</h2>
+          <p>
+            Basé au <strong>Mans centre</strong>, Vincent Bastille intervient naturellement sur <strong>Le Mans</strong>, la <strong>Sarthe</strong> et peut se déplacer plus largement selon la nature de l’événement. Cette proximité est un avantage pour les structures locales qui cherchent un <strong>DJ au Mans</strong> réactif, identifiable et réellement ancré dans le territoire.
+          </p>
+        </div>
+
+        <div class="card feature">
+          <h3>Zones régulièrement pertinentes pour une recherche “DJ Le Mans”</h3>
+          <div class="zones">
+            <span class="zone">Le Mans centre</span>
+            <span class="zone">Sarthe</span>
+            <span class="zone">Allonnes</span>
+            <span class="zone">Arnage</span>
+            <span class="zone">La Flèche</span>
+            <span class="zone">Sablé-sur-Sarthe</span>
+            <span class="zone">Changé</span>
+            <span class="zone">Coulaines</span>
+            <span class="zone">Yvré-l'Évêque</span>
+            <span class="zone">Pays de la Loire</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="avis">
+      <div class="container">
+        <div class="section-head">
+          <h2>Avis sur Vincent Bastille, DJ au Mans</h2>
+          <p>
+            Les avis ci-dessous servent à donner un aperçu du type d’expérience recherché par les clients : un DJ fiable, élégant, vivant, qui comprend la salle et sait faire évoluer l’ambiance.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card review">
+            <div class="stars">★★★★★</div>
+            <strong>Soirée d’entreprise au Mans</strong>
+            <p>
+              “Très bon équilibre entre élégance et énergie. L’ambiance est montée naturellement, sans moment creux, et les invités sont restés jusqu’au bout.”
+            </p>
+          </article>
+
+          <article class="card review">
+            <div class="stars">★★★★★</div>
+            <strong>Événement festif / public varié</strong>
+            <p>
+              “On sent une vraie culture musicale. Ce n’était ni un set trop pointu, ni un truc passe-partout. Il a su réunir des gens qui n’avaient pas les mêmes goûts.”
+            </p>
+          </article>
+
+          <article class="card review">
+            <div class="stars">★★★★★</div>
+            <strong>Anniversaire au Mans</strong>
+            <p>
+              “Super sensation de fluidité. Les générations se mélangeaient, les styles aussi, mais tout restait cohérent. Très bon ressenti humain en plus.”
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Pourquoi cette page peut mieux répondre à “DJ Le Mans” que beaucoup d’autres ?</h2>
+          <p>
+            Parce qu’elle ne se contente pas d’empiler des mots-clés. Elle explique clairement qui est le DJ, où il est basé, quels événements il anime, quel style il propose et comment le contacter immédiatement. C’est exactement ce que cherchent les internautes, et c’est aussi le type de clarté que Google aime comprendre.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card feature">
+            <h3>Clarté locale</h3>
+            <p>
+              Le Mans est cité comme zone principale, avec une présence réelle en Sarthe. Cela renforce la pertinence géographique de la page.
+            </p>
+          </article>
+          <article class="card feature">
+            <h3>Intention commerciale</h3>
+            <p>
+              La page répond à une recherche transactionnelle : trouver et réserver un DJ au Mans, pas simplement lire une bio artistique.
+            </p>
+          </article>
+          <article class="card feature">
+            <h3>Conversion directe</h3>
+            <p>
+              Appel, WhatsApp et formulaire : trois points d’entrée simples pour transformer une visite en demande concrète.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Questions fréquentes sur la réservation d’un DJ au Mans</h2>
+        </div>
+
+        <div class="faq">
+          <article class="card faq-item">
+            <h3>Quel DJ choisir au Mans pour une soirée d’entreprise ?</h3>
+            <p>
+              Le bon DJ pour une soirée d’entreprise au Mans doit savoir tenir une ambiance professionnelle au départ, puis installer progressivement plus d’énergie. C’est exactement le type de lecture de salle que propose Vincent Bastille.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>Peut-on réserver un DJ au Mans pour un bar, un club ou un festival ?</h3>
+            <p>
+              Oui. Vincent Bastille propose aussi des formats adaptés aux bars, clubs, festivals et événements publics, avec une vraie orientation house et une capacité d’adaptation au lieu et au public.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>Comment contacter rapidement un DJ au Mans ?</h3>
+            <p>
+              Le plus simple est d’appeler directement le 06 59 98 67 50, d’envoyer un message WhatsApp ou de remplir le formulaire de cette page pour recevoir un devis gratuit.
+            </p>
+          </article>
+
+          <article class="card faq-item">
+            <h3>Ce DJ au Mans fait-il seulement de la house ?</h3>
+            <p>
+              Non. La house est l’identité principale, mais elle s’ouvre selon le contexte à la pop, au rock, au disco et aux années 80. Le principe n’est pas de s’enfermer, mais de construire une vraie soirée.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-wrap">
+        <div class="card contact-card">
+          <h2>Contacter Vincent Bastille – DJ Le Mans</h2>
+          <p class="lead" style="margin-bottom:14px;">
+            Pour réserver un <strong>DJ au Mans</strong>, obtenir un <strong>devis gratuit</strong> ou poser une question sur votre soirée, le plus rapide reste l’appel ou WhatsApp.
+          </p>
+
+          <div class="contact-list">
+            <a class="contact-item" href="tel:+33659986750">
+              <div>📞</div>
+              <div>
+                <strong>Téléphone</strong>
+                06 59 98 67 50
+              </div>
+            </a>
+
+            <a class="contact-item" href="https://wa.me/33659986750" target="_blank" rel="noopener">
+              <div>💬</div>
+              <div>
+                <strong>WhatsApp</strong>
+                Envoyer un message direct
+              </div>
+            </a>
+
+            <a class="contact-item" href="mailto:vincentbastille100@gmail.com">
+              <div>✉️</div>
+              <div>
+                <strong>Email direct</strong>
+                vincentbastille100@gmail.com
+              </div>
+            </a>
+
+            <div class="contact-item">
+              <div>📍</div>
+              <div>
+                <strong>Base locale</strong>
+                Le Mans centre · interventions en Sarthe et selon projet
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card contact-card">
+          <h2>Formulaire simple</h2>
+          <p class="small">
+            Version immédiate sans backend. Ce formulaire ouvre l’email du visiteur. Pour un vrai envoi automatique vers <strong>spectramedia@gmail.com</strong>, il faudra ensuite brancher Formspree, FormSubmit ou un endpoint Mailjet.
+          </p>
+
+          <form action="mailto:spectramedia@gmail.com" method="post" enctype="text/plain">
+            <div class="field">
+              <label for="nom">Nom</label>
+              <input id="nom" name="Nom" type="text" placeholder="Votre nom" required />
+            </div>
+
+            <div class="field">
+              <label for="telephone">Téléphone</label>
+              <input id="telephone" name="Téléphone" type="tel" placeholder="Votre numéro" />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="Email" type="email" placeholder="Votre email" required />
+            </div>
+
+            <div class="field">
+              <label for="type">Type d’événement</label>
+              <select id="type" name="Type d’événement">
+                <option>Soirée d’entreprise</option>
+                <option>Festival</option>
+                <option>Bar / Club</option>
+                <option>Anniversaire</option>
+                <option>Mariage</option>
+                <option>Autre</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">Votre message</label>
+              <textarea id="message" name="Message" placeholder="Date, lieu, type de public, ambiance recherchée…"></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Envoyer la demande</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="card footer-card">
+        <strong>DJ Le Mans – Vincent Bastille</strong><br />
+        Soirées d’entreprise, festivals, bars, clubs, anniversaires, mariages et événements sur mesure au Mans et en Sarthe.<br /><br />
+        <span class="small">
+          Téléphone : <a href="tel:+33659986750">06 59 98 67 50</a> ·
+          Email : <a href="mailto:vincentbastille100@gmail.com">vincentbastille100@gmail.com</a> ·
+          Site : <a href="https://www.vincentbastille.online/" target="_blank" rel="noopener">vincentbastille.online</a>
+        </span>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
