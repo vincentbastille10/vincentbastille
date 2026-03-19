@@ -1528,10 +1528,15 @@
         <div class="contact-card">
           <h2>Demande rapide</h2>
           <p class="form-note">
-            Ce formulaire ouvre l’email du visiteur. Pour un vrai envoi automatique vers <strong>spectramedia@gmail.com</strong>, il faudra brancher ensuite Formspree, FormSubmit ou Mailjet.
+            
           </p>
 
-          <form action="mailto:spectramedia@gmail.com" method="post" enctype="text/plain">
+          <form action="https://formspree.io/f/mzdjogoa" method="POST">
+            <input type="hidden" name="_subject" value="Nouveau lead DJ Le Mans">
+            <input type="hidden" name="_language" value="fr">
+            <input type="text" name="_gotcha" style="display:none">
+            <input type="hidden" name="_next" value="https://www.vincentbastille.online/merci.html">
+            
             <div class="field">
               <label for="nom">Nom</label>
               <input id="nom" name="Nom" type="text" placeholder="Votre nom" required />
