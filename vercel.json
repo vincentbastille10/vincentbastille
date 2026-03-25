@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "https://vincentbastille.online/(.*)",
+      "destination": "https://www.vincentbastille.online/$1",
+      "permanent": true
+    }
+  ]
+}
