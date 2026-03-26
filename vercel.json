@@ -1,7 +1,13 @@
 {
   "redirects": [
     {
-      "source": "https://vincentbastille.online/(.*)",
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "vincentbastille.online"
+        }
+      ],
       "destination": "https://www.vincentbastille.online/$1",
       "permanent": true
     }
