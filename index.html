@@ -218,6 +218,29 @@ nav{position:absolute;top:0;left:0;right:0;z-index:10;display:flex;justify-conte
 .fg select option{background:#0d0a1a;color:var(--white);}
 .fg textarea{resize:vertical;min-height:100px;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.date-trigger{width:100%;min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:.8rem;padding:.72rem .9rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:var(--white);font-family:'DM Sans',sans-serif;text-align:left;cursor:pointer;transition:border-color .3s,box-shadow .3s,background .3s;}
+.date-trigger:hover,.date-trigger[aria-expanded="true"]{border-color:var(--violet);box-shadow:0 0 0 3px rgba(123,47,255,.14);background:rgba(123,47,255,.06);}
+.date-trigger-main{display:flex;align-items:center;gap:.65rem;font-size:.86rem;}
+.date-trigger-date{display:block;font-size:.68rem;color:var(--cyan);margin-top:.12rem;}
+.date-trigger-arrow{font-size:.72rem;color:var(--grey);transition:transform .25s;}
+.date-trigger[aria-expanded="true"] .date-trigger-arrow{transform:rotate(180deg);}
+.calendar-drawer{margin-top:.55rem;padding:.85rem;background:#0d0a1a;border:1px solid rgba(123,47,255,.28);box-shadow:0 18px 50px rgba(0,0,0,.45);animation:calOpen .22s ease;}
+.calendar-drawer[hidden]{display:none;}
+@keyframes calOpen{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.calendar-head{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:.7rem;}
+.calendar-title{font-family:'Syne',sans-serif;font-size:.78rem;font-weight:700;text-transform:capitalize;text-align:center;}
+.calendar-nav{width:30px;height:30px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);color:var(--white);cursor:pointer;font-size:1rem;}
+.calendar-nav:hover:not(:disabled){border-color:var(--violet);background:rgba(123,47,255,.14);}
+.calendar-nav:disabled{opacity:.25;cursor:not-allowed;}
+.calendar-weekdays,.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;}
+.calendar-weekdays span{font-size:.54rem;color:var(--grey);text-align:center;text-transform:uppercase;padding:.2rem 0;}
+.calendar-day,.calendar-empty{aspect-ratio:1;display:grid;place-items:center;}
+.calendar-day{border:1px solid transparent;background:rgba(255,255,255,.035);color:var(--white);font-family:'DM Sans',sans-serif;font-size:.72rem;cursor:pointer;transition:all .18s;}
+.calendar-day:hover:not(:disabled){border-color:var(--cyan);background:rgba(0,212,255,.1);}
+.calendar-day.today{border-color:rgba(0,212,255,.45);color:var(--cyan);}
+.calendar-day.selected{background:linear-gradient(135deg,var(--violet),var(--blue));border-color:var(--violet);color:#fff;box-shadow:0 0 15px rgba(123,47,255,.45);}
+.calendar-day:disabled{opacity:.2;cursor:not-allowed;text-decoration:line-through;}
+.calendar-help{font-size:.6rem;color:var(--grey);text-align:center;margin-top:.65rem;}
 .form-submit{width:100%;padding:.95rem;background:linear-gradient(135deg,var(--violet),var(--blue));color:#fff;border:none;font-family:'Syne',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;cursor:none;transition:all .3s;position:relative;overflow:hidden;margin-top:.4rem;}
 .form-submit::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--cyan),var(--violet));transform:translateX(-101%);transition:transform .4s cubic-bezier(.7,0,.3,1);}
 .form-submit:hover::before{transform:translateX(0);}
@@ -515,7 +538,24 @@ footer{padding:2rem 6vw;border-top:1px solid rgba(255,255,255,.05);display:flex;
           </div>
         </div>
         <div class="form-row">
-          <div class="fg"><label>Date souhaitée</label><input type="date" name="date"></div>
+          <div class="fg">
+            <label>Date souhaitée</label>
+            <input type="hidden" name="date" id="bookingDate">
+            <button type="button" class="date-trigger" id="calendarToggle" aria-expanded="false" aria-controls="bookingCalendar">
+              <span class="date-trigger-main"><span>📅</span><span>Choisir le jour<span class="date-trigger-date" id="selectedDateLabel">Aucune date sélectionnée</span></span></span>
+              <span class="date-trigger-arrow">▼</span>
+            </button>
+            <div class="calendar-drawer" id="bookingCalendar" hidden>
+              <div class="calendar-head">
+                <button type="button" class="calendar-nav" id="calendarPrev" aria-label="Mois précédent">‹</button>
+                <div class="calendar-title" id="calendarTitle"></div>
+                <button type="button" class="calendar-nav" id="calendarNext" aria-label="Mois suivant">›</button>
+              </div>
+              <div class="calendar-weekdays" aria-hidden="true"><span>Lun</span><span>Mar</span><span>Mer</span><span>Jeu</span><span>Ven</span><span>Sam</span><span>Dim</span></div>
+              <div class="calendar-grid" id="calendarGrid" role="grid" aria-label="Choisir une date"></div>
+              <p class="calendar-help">Cliquez sur le jour exact de votre événement</p>
+            </div>
+          </div>
           <div class="fg"><label>Lieu / Ville</label><input type="text" name="location" placeholder="Le Mans, Paris..."></div>
         </div>
         <div class="fg"><label>Message</label><textarea name="message" placeholder="Décrivez votre événement, jauge, budget indicatif..."></textarea></div>
@@ -594,6 +634,54 @@ window.addEventListener('scroll',()=>{
 },{passive:true});
 
 // FORM
+const bookingDate=document.getElementById('bookingDate');
+const calendarToggle=document.getElementById('calendarToggle');
+const calendarDrawer=document.getElementById('bookingCalendar');
+const calendarTitle=document.getElementById('calendarTitle');
+const calendarGrid=document.getElementById('calendarGrid');
+const calendarPrev=document.getElementById('calendarPrev');
+const calendarNext=document.getElementById('calendarNext');
+const selectedDateLabel=document.getElementById('selectedDateLabel');
+const today=new Date();today.setHours(0,0,0,0);
+let calendarMonth=new Date(today.getFullYear(),today.getMonth(),1);
+
+function dateISO(y,m,d){return `${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;}
+function renderCalendar(){
+  const y=calendarMonth.getFullYear(),m=calendarMonth.getMonth();
+  calendarTitle.textContent=calendarMonth.toLocaleDateString('fr-FR',{month:'long',year:'numeric'});
+  calendarPrev.disabled=y===today.getFullYear()&&m===today.getMonth();
+  calendarGrid.innerHTML='';
+  const first=(new Date(y,m,1).getDay()+6)%7;
+  const total=new Date(y,m+1,0).getDate();
+  for(let i=0;i<first;i++){
+    const empty=document.createElement('span');empty.className='calendar-empty';calendarGrid.appendChild(empty);
+  }
+  for(let d=1;d<=total;d++){
+    const dayDate=new Date(y,m,d),iso=dateISO(y,m,d);
+    const btn=document.createElement('button');
+    btn.type='button';btn.className='calendar-day';btn.textContent=d;
+    btn.setAttribute('role','gridcell');
+    btn.setAttribute('aria-label',dayDate.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'}));
+    if(dayDate<today)btn.disabled=true;
+    if(dayDate.getTime()===today.getTime())btn.classList.add('today');
+    if(bookingDate.value===iso)btn.classList.add('selected');
+    btn.addEventListener('click',()=>{
+      bookingDate.value=iso;
+      selectedDateLabel.textContent=dayDate.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+      calendarDrawer.hidden=true;calendarToggle.setAttribute('aria-expanded','false');
+      renderCalendar();
+    });
+    calendarGrid.appendChild(btn);
+  }
+}
+calendarToggle.addEventListener('click',()=>{
+  const opening=calendarDrawer.hidden;
+  calendarDrawer.hidden=!opening;calendarToggle.setAttribute('aria-expanded',String(opening));
+  if(opening)renderCalendar();
+});
+calendarPrev.addEventListener('click',()=>{calendarMonth=new Date(calendarMonth.getFullYear(),calendarMonth.getMonth()-1,1);renderCalendar();});
+calendarNext.addEventListener('click',()=>{calendarMonth=new Date(calendarMonth.getFullYear(),calendarMonth.getMonth()+1,1);renderCalendar();});
+
 document.getElementById('bookForm').addEventListener('submit',async function(e){
   e.preventDefault();
   const btn=this.querySelector('.form-submit');
