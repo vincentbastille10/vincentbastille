@@ -204,6 +204,20 @@ nav{position:absolute;top:0;left:0;right:0;z-index:10;display:flex;justify-conte
 .video-live-link:hover{color:var(--white);}
 @media(max-width:760px){#video-live{padding:6rem 6vw}.video-live-inner{grid-template-columns:1fr}.video-live-frame{max-width:390px;margin:0 auto}}
 
+/* ===== MIX & PLATEFORMES ===== */
+#listen{padding:8rem 6vw;background:var(--deep);border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04);}
+.listen-inner{max-width:1180px;margin:0 auto;}
+.listen-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:2.5rem;}
+.listen-head .s-title{font-size:clamp(2.4rem,4.6vw,4.8rem);margin:0;}
+.listen-head p{max-width:430px;color:var(--grey);font-size:.9rem;line-height:1.75;}
+.mix-player{position:relative;width:100%;aspect-ratio:16/9;background:#050508;border:1px solid rgba(123,47,255,.28);box-shadow:0 25px 75px rgba(0,0,0,.5);overflow:hidden;}
+.mix-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.platforms{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem;}
+.platform-link{display:inline-flex;align-items:center;justify-content:center;min-width:150px;padding:.85rem 1.3rem;border:1px solid rgba(255,255,255,.14);color:var(--white);font-family:'Syne',sans-serif;font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:.3s;}
+.platform-link:hover{border-color:var(--cyan);background:rgba(0,212,255,.07);transform:translateY(-2px);}
+.platform-link.primary{background:linear-gradient(135deg,var(--violet),var(--blue));border-color:transparent;}
+@media(max-width:760px){#listen{padding:6rem 6vw}.listen-head{display:block}.listen-head p{margin-top:1.2rem}.platform-link{flex:1;min-width:135px}}
+
 /* ===== BOOKING ===== */
 #booking{padding:8rem 6vw;background:var(--black);position:relative;overflow:hidden;}
 .booking-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(123,47,255,.05) 0%,transparent 60%);}
@@ -516,6 +530,28 @@ footer{padding:2rem 6vw;border-top:1px solid rgba(255,255,255,.05);display:flex;
     </div>
     <div class="video-live-frame reveal d2">
       <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1618482385532031&show_text=false&width=420" title="Vincent Bastille — vidéo" scrolling="no" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen="true" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ====== MIX & PLATEFORMES ====== -->
+<section id="listen">
+  <div class="listen-inner">
+    <div class="listen-head">
+      <div class="reveal">
+        <div class="s-label">Écouter Vincent Bastille</div>
+        <h2 class="s-title">8 heures de<br>Disco House.</h2>
+      </div>
+      <p class="reveal d1">Une nuit complète entre Disco House, Groove Culture, influences UK et US, classiques réinventés et énergie dancefloor.</p>
+    </div>
+    <div class="mix-player reveal d2">
+      <iframe src="https://www.youtube-nocookie.com/embed/4oXs_ruRhMM" title="Vincent Bastille — Disco House Mix" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="platforms reveal d3">
+      <a class="platform-link primary" href="https://youtu.be/4oXs_ruRhMM" target="_blank" rel="noopener">Mix YouTube</a>
+      <a class="platform-link" href="https://open.spotify.com/intl-fr/artist/2QS54zBHMU8zdaRs1pQRF0" target="_blank" rel="noopener">Spotify</a>
+      <a class="platform-link" href="https://vincentbastille.bandcamp.com/" target="_blank" rel="noopener">Bandcamp</a>
+      <a class="platform-link" href="https://www.youtube.com/@vincentbastillle" target="_blank" rel="noopener">Chaîne YouTube</a>
     </div>
   </div>
 </section>
