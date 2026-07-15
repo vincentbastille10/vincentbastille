@@ -643,27 +643,28 @@ const calendarPrev=document.getElementById('calendarPrev');
 const calendarNext=document.getElementById('calendarNext');
 const selectedDateLabel=document.getElementById('selectedDateLabel');
 const today=new Date();today.setHours(0,0,0,0);
-let calendarMonth=new Date(today.getFullYear(),today.getMonth(),1);
+const monthNames=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+let calendarMonth=new Date(today.getFullYear(),today.getMonth(),1,12);
 
 function dateISO(y,m,d){return `${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;}
 function renderCalendar(){
   const y=calendarMonth.getFullYear(),m=calendarMonth.getMonth();
-  calendarTitle.textContent=calendarMonth.toLocaleDateString('fr-FR',{month:'long',year:'numeric'});
+  calendarTitle.textContent=`${monthNames[m]} ${y}`;
   calendarPrev.disabled=y===today.getFullYear()&&m===today.getMonth();
   calendarGrid.innerHTML='';
-  const first=(new Date(y,m,1).getDay()+6)%7;
-  const total=new Date(y,m+1,0).getDate();
+  const first=(new Date(y,m,1,12).getDay()+6)%7;
+  const total=new Date(y,m+1,0,12).getDate();
   for(let i=0;i<first;i++){
     const empty=document.createElement('span');empty.className='calendar-empty';calendarGrid.appendChild(empty);
   }
   for(let d=1;d<=total;d++){
-    const dayDate=new Date(y,m,d),iso=dateISO(y,m,d);
+    const dayDate=new Date(y,m,d,12),iso=dateISO(y,m,d);
     const btn=document.createElement('button');
     btn.type='button';btn.className='calendar-day';btn.textContent=d;
     btn.setAttribute('role','gridcell');
     btn.setAttribute('aria-label',dayDate.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'}));
     if(dayDate<today)btn.disabled=true;
-    if(dayDate.getTime()===today.getTime())btn.classList.add('today');
+    if(iso===dateISO(today.getFullYear(),today.getMonth(),today.getDate()))btn.classList.add('today');
     if(bookingDate.value===iso)btn.classList.add('selected');
     btn.addEventListener('click',()=>{
       bookingDate.value=iso;
@@ -679,8 +680,8 @@ calendarToggle.addEventListener('click',()=>{
   calendarDrawer.hidden=!opening;calendarToggle.setAttribute('aria-expanded',String(opening));
   if(opening)renderCalendar();
 });
-calendarPrev.addEventListener('click',()=>{calendarMonth=new Date(calendarMonth.getFullYear(),calendarMonth.getMonth()-1,1);renderCalendar();});
-calendarNext.addEventListener('click',()=>{calendarMonth=new Date(calendarMonth.getFullYear(),calendarMonth.getMonth()+1,1);renderCalendar();});
+calendarPrev.addEventListener('click',()=>{calendarMonth=new Date(calendarMonth.getFullYear(),calendarMonth.getMonth()-1,1,12);renderCalendar();});
+calendarNext.addEventListener('click',()=>{calendarMonth=new Date(calendarMonth.getFullYear(),calendarMonth.getMonth()+1,1,12);renderCalendar();});
 
 document.getElementById('bookForm').addEventListener('submit',async function(e){
   e.preventDefault();
