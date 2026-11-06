@@ -815,10 +815,11 @@ document.getElementById('bookForm').addEventListener('submit',async function(e){
 <script>
 (function(){var v=document.getElementById('hero-video');if(!v)return;
 var hint=document.createElement('button');hint.textContent='\uD83D\uDD0A Activer le son';
-hint.style.cssText='position:absolute;z-index:5;left:50%;top:1rem;transform:translateX(-50%);padding:.6rem 1.1rem;border:0;border-radius:99px;background:#7b2fff;color:#fff;font:700 .75rem Syne,sans-serif;letter-spacing:.1em;cursor:pointer;display:none';
+hint.style.cssText='position:absolute;z-index:5;left:50%;top:50%;transform:translate(-50%,-50%);padding:1rem 1.8rem;border:0;border-radius:99px;background:#7b2fff;color:#fff;font:700 .95rem Syne,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;display:none;box-shadow:0 0 40px rgba(123,47,255,.8)';
 v.parentNode.appendChild(hint);
 function on(){v.muted=false;v.play().catch(function(){});hint.style.display='none';['pointerdown','keydown','touchstart','click'].forEach(function(e){document.removeEventListener(e,on,true)});}
 hint.onclick=on;
+v.addEventListener('volumechange',function(){hint.style.display=v.muted?'block':'none'});
 v.muted=false;
 v.play().catch(function(){v.muted=true;v.play().catch(function(){});hint.style.display='block';
 ['pointerdown','keydown','touchstart','click'].forEach(function(e){document.addEventListener(e,on,true)});});
