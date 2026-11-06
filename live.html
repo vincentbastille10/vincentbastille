@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vincent Bastille — Meilleur DJ House — Le Mans / Paris</title>
+<meta name="description" content="Vincent Bastille, DJ house au Mans et à Paris : mariages, soirées d'entreprise, clubs et festivals. Nouveaux remixes 2026 : Pasilda, Hugel, Michael Jackson. Remix Jennifer Lopez, #2 Beatport.">
+<link rel="canonical" href="https://www.vincentbastille.online/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vincent Bastille — DJ House Le Mans / Paris">
+<meta property="og:description" content="DJ house, producteur et remixeur. Nouveaux remixes 2026 : Pasilda, Hugel, Michael Jackson. Booking mariages, entreprises, clubs.">
+<meta property="og:url" content="https://www.vincentbastille.online/">
+<meta property="og:image" content="https://www.vincentbastille.online/portrait.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MusicGroup","name":"Vincent Bastille","url":"https://www.vincentbastille.online/","genre":["House","Disco House","Afro House"],"description":"DJ house et producteur basé au Mans et à Paris. Remixes de Jennifer Lopez, Madonna, Michael Jackson, Hugel.","sameAs":["https://vincentbastille.bandcamp.com/","https://remixes.vincentbastille.online/"],"track":[{"@type":"MusicRecording","name":"Afro Medusa - Pasilda (Vincent Bastille Remix)","url":"https://vincentbastille.bandcamp.com/track/afro-medusa-pasilda-vincent-bastille-remix","datePublished":"2026-10-15"},{"@type":"MusicRecording","name":"Hugel & Ismael Angel - Movin' To The Sun (Vincent Bastille Remix)","url":"https://vincentbastille.bandcamp.com/track/hugel-ismael-angel-movin-to-the-sun-vincent-bastille-remix","datePublished":"2026-09-29"},{"@type":"MusicRecording","name":"Hugel - BamBam (Vincent Bastille Remix)","url":"https://vincentbastille.bandcamp.com/track/hugel-bambam-vincent-bastille-remix","datePublished":"2026-09-27"}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#050508;--deep:#0a0a12;--violet:#7b2fff;--blue:#1a6fff;
+  --cyan:#00d4ff;--white:#f0eeff;--grey:#8888aa;--card-bg:rgba(15,10,30,0.88);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;cursor:none;}
+
+/* CURSOR */
+.cur{position:fixed;width:10px;height:10px;background:var(--violet);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .3s,height .3s;mix-blend-mode:screen;}
+.cur-ring{position:fixed;width:36px;height:36px;border:1px solid rgba(123,47,255,.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s;}
+
+/* GRAIN */
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");opacity:.16;pointer-events:none;z-index:1000;animation:grain .4s steps(1) infinite;}
+@keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(-2px,1px)}50%{transform:translate(1px,-2px)}75%{transform:translate(-1px,2px)}100%{transform:translate(2px,-1px)}}
+body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.035) 2px,rgba(0,0,0,.035) 4px);pointer-events:none;z-index:999;}
+
+/* ===== HERO ===== */
+#hero{position:relative;height:100vh;min-height:680px;display:flex;flex-direction:column;justify-content:flex-end;padding:0 6vw 8vh;overflow:hidden;}
+
+.hero-photo{
+  position:absolute;inset:0;
+  background-image: url('/portrait.jpg');
+  background-size:cover;background-position:center 15%;
+  filter:brightness(.38) contrast(1.25) saturate(.7);
+  animation:heroKen 20s ease-in-out infinite alternate;
+  z-index:0;
+}
+@keyframes heroKen{from{transform:scale(1.04) translateY(0)}to{transform:scale(1.11) translateY(-20px)}}
+
+.hero-ov{position:absolute;inset:0;z-index:1;background:
+  linear-gradient(to bottom,rgba(5,5,8,.1) 0%,rgba(5,5,8,.5) 55%,rgba(5,5,8,.98) 100%),
+  linear-gradient(to right,rgba(5,5,8,.55) 0%,transparent 55%),
+  linear-gradient(135deg,rgba(123,47,255,.1) 0%,transparent 50%,rgba(0,212,255,.06) 100%);}
+
+/* Light beams */
+.beam{position:absolute;top:-15%;width:1px;height:85%;transform-origin:top;z-index:2;animation:beamA 7s ease-in-out infinite;}
+.beam:nth-child(1){left:22%;background:linear-gradient(to bottom,transparent,rgba(123,47,255,.22),transparent);animation-delay:0s;}
+.beam:nth-child(2){left:52%;background:linear-gradient(to bottom,transparent,rgba(0,212,255,.15),transparent);animation-delay:-2.5s;animation-duration:9s;}
+.beam:nth-child(3){left:76%;background:linear-gradient(to bottom,transparent,rgba(123,47,255,.18),transparent);animation-delay:-5s;animation-duration:6s;}
+@keyframes beamA{0%,100%{transform:rotate(-14deg);opacity:.2}50%{transform:rotate(14deg);opacity:.75}}
+
+/* Orbs */
+.orb{position:absolute;border-radius:50%;filter:blur(90px);z-index:1;animation:orbP 8s ease-in-out infinite;}
+.orb1{width:500px;height:500px;background:rgba(123,47,255,.09);top:-8%;left:-8%;}
+.orb2{width:380px;height:380px;background:rgba(0,212,255,.06);bottom:8%;right:-5%;animation-delay:-3.5s;}
+@keyframes orbP{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.08)}}
+
+/* EQ deco */
+.eq-deco{position:absolute;bottom:0;right:5%;display:flex;align-items:flex-end;gap:3px;height:90px;z-index:2;opacity:.1;}
+.eq-b{width:4px;background:linear-gradient(to top,var(--violet),var(--cyan));border-radius:2px 2px 0 0;animation:eqA 1.2s ease-in-out infinite;}
+@keyframes eqA{0%,100%{transform:scaleY(.2)}50%{transform:scaleY(1)}}
+
+/* NAV */
+nav{position:absolute;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:2rem 6vw;opacity:0;animation:fadeIn .8s ease forwards .2s;}
+.nav-logo{font-family:'Syne',sans-serif;font-size:.85rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--white);text-decoration:none;}
+.nav-logo span{background:linear-gradient(90deg,var(--violet),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.bpm-pill{display:flex;align-items:center;gap:8px;padding:.4rem .9rem;border:1px solid rgba(255,255,255,.08);background:rgba(0,0,0,.4);backdrop-filter:blur(10px);}
+.bpm-dot{width:7px;height:7px;background:var(--violet);border-radius:50%;box-shadow:0 0 8px var(--violet);animation:bpmP .47s ease-in-out infinite;}
+@keyframes bpmP{0%,100%{transform:scale(1)}50%{transform:scale(.45);opacity:.3}}
+.bpm-txt{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--grey);}
+
+/* HERO CONTENT */
+.hero-cnt{position:relative;z-index:10;max-width:860px;}
+.hero-lbl{display:inline-flex;align-items:center;gap:10px;font-size:.63rem;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:var(--cyan);margin-bottom:1.2rem;opacity:0;animation:fadeUp .8s ease forwards .3s;}
+.hero-lbl::before{content:'';width:28px;height:1px;background:var(--cyan);}
+
+/* 36M BADGE */
+.badge{display:inline-flex;align-items:center;gap:14px;padding:.65rem 1.4rem;background:linear-gradient(135deg,rgba(123,47,255,.18),rgba(0,212,255,.08));border:1px solid rgba(0,212,255,.2);backdrop-filter:blur(10px);margin-bottom:1.5rem;opacity:0;animation:fadeUp .8s ease forwards .4s;}
+.badge-num{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;background:linear-gradient(90deg,var(--cyan),var(--white));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.badge-txt{font-size:.68rem;color:var(--grey);line-height:1.4;}
+.badge-txt strong{display:block;color:var(--white);font-size:.72rem;margin-bottom:.1rem;}
+
+.hero-title{font-family:'Syne',sans-serif;font-size:clamp(3.8rem,10.5vw,10.5rem);font-weight:800;line-height:.88;letter-spacing:-.03em;margin-bottom:1.2rem;opacity:0;animation:fadeUp .9s ease forwards .52s;}
+.hero-title .l1{display:block;}
+.hero-title .l2{display:block;background:linear-gradient(90deg,var(--violet),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+
+.hero-sub{font-family:'Syne',sans-serif;font-size:clamp(.9rem,2vw,1.25rem);font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;opacity:0;animation:fadeUp .8s ease forwards .7s;}
+.hero-tag{font-size:.9rem;font-weight:300;color:var(--grey);font-style:italic;margin-bottom:1.8rem;opacity:0;animation:fadeUp .8s ease forwards .85s;}
+
+.hero-phone{display:inline-flex;align-items:center;gap:10px;padding:.55rem 1.3rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);color:var(--white);text-decoration:none;font-family:'Syne',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.07em;margin-bottom:2rem;transition:all .3s;opacity:0;animation:fadeUp .8s ease forwards .95s;}
+.hero-phone:hover{background:rgba(123,47,255,.2);border-color:var(--violet);box-shadow:0 0 20px rgba(123,47,255,.3);}
+.phone-ico{animation:ring 2.5s ease-in-out infinite;display:inline-block;}
+@keyframes ring{0%,100%{transform:rotate(0)}5%{transform:rotate(15deg)}10%{transform:rotate(-15deg)}15%{transform:rotate(8deg)}20%{transform:rotate(0)}}
+
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap;opacity:0;animation:fadeUp .8s ease forwards 1.1s;}
+
+/* scroll hint */
+.scroll-hint{position:absolute;bottom:2rem;right:6vw;z-index:10;display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fadeIn 1s ease forwards 1.9s;}
+.scroll-hint span{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);writing-mode:vertical-rl;}
+.scroll-line{width:1px;height:55px;background:linear-gradient(to bottom,rgba(136,136,170,.6),transparent);animation:sLine 2s ease-in-out infinite;}
+@keyframes sLine{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ===== BUTTONS ===== */
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;padding:.85rem 1.8rem;font-family:'Syne',sans-serif;font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border:none;cursor:none;overflow:hidden;transition:all .3s ease;}
+.btn::before{content:'';position:absolute;inset:0;transform:translateX(-101%);transition:transform .4s cubic-bezier(.7,0,.3,1);}
+.btn:hover::before{transform:translateX(0);}
+.btn span,.btn i{position:relative;z-index:1;}
+.btn i{transition:transform .3s;}
+.btn:hover i{transform:scale(1.2);}
+.btn-p{background:linear-gradient(135deg,var(--violet),var(--blue));color:#fff;box-shadow:0 0 28px rgba(123,47,255,.4);}
+.btn-p::before{background:linear-gradient(135deg,var(--cyan),var(--violet));}
+.btn-p:hover{box-shadow:0 0 50px rgba(123,47,255,.7),0 0 90px rgba(0,212,255,.2);transform:translateY(-2px);}
+.btn-o{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(10px);}
+.btn-o::before{background:rgba(255,255,255,.07);}
+.btn-o:hover{border-color:var(--violet);box-shadow:0 0 20px rgba(123,47,255,.2);transform:translateY(-2px);}
+
+/* ===== FLOATING PHONE ===== */
+.float-phone{position:fixed;bottom:2rem;right:2rem;z-index:500;display:flex;align-items:center;gap:10px;padding:.7rem 1.2rem;background:linear-gradient(135deg,var(--violet),var(--blue));color:#fff;text-decoration:none;font-family:'Syne',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.08em;box-shadow:0 0 30px rgba(123,47,255,.5);opacity:0;animation:floatIn .8s ease forwards 2.2s,phonePulse 3s ease-in-out 3.5s infinite;cursor:none;transition:box-shadow .3s,transform .3s;}
+.float-phone:hover{box-shadow:0 0 50px rgba(123,47,255,.8);transform:translateY(-3px);}
+@keyframes floatIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes phonePulse{0%,100%{box-shadow:0 0 30px rgba(123,47,255,.5)}50%{box-shadow:0 0 55px rgba(123,47,255,.8),0 0 80px rgba(0,212,255,.2)}}
+
+/* ===== PRESENCE SCÈNE ===== */
+#presence{padding:5rem 6vw;background:var(--black);border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04);}
+.presence-inner{display:flex;align-items:center;justify-content:space-between;gap:4rem;flex-wrap:wrap;}
+.presence-title{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-bottom:.8rem;}
+.presence-title em{font-style:normal;background:linear-gradient(90deg,var(--violet),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.presence-desc{font-size:.88rem;color:var(--grey);line-height:1.7;max-width:360px;font-weight:300;}
+.venues-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.05);flex:1;min-width:280px;}
+.venue{background:var(--deep);padding:1.4rem;text-align:center;transition:background .3s;position:relative;overflow:hidden;}
+.venue::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--violet),var(--cyan));transform:scaleX(0);transition:transform .4s ease;}
+.venue:hover{background:rgba(123,47,255,.07);}
+.venue:hover::after{transform:scaleX(1);}
+.v-icon{font-size:1.4rem;margin-bottom:.4rem;display:block;}
+.v-type{font-family:'Syne',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--violet);margin-bottom:.2rem;display:block;}
+.v-name{font-size:.76rem;color:var(--grey);line-height:1.35;}
+
+/* ===== FOR DJs ===== */
+#fordjs{padding:8rem 6vw;background:var(--deep);}
+.s-label{display:inline-flex;align-items:center;gap:10px;font-size:.63rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--violet);margin-bottom:.8rem;}
+.s-label::before{content:'';width:18px;height:1px;background:var(--violet);}
+.s-title{font-family:'Syne',sans-serif;font-size:clamp(2.2rem,5.5vw,4.8rem);font-weight:800;line-height:1;letter-spacing:-.03em;margin-bottom:3.5rem;}
+.dj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.05);}
+.dj-stat{padding:2.8rem 2.2rem;background:var(--deep);transition:background .4s;position:relative;overflow:hidden;}
+.dj-stat::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--violet),var(--cyan));transform:scaleX(0);transform-origin:left;transition:transform .4s ease;}
+.dj-stat:hover{background:rgba(123,47,255,.07);}
+.dj-stat:hover::after{transform:scaleX(1);}
+.dj-stat.feat{background:linear-gradient(135deg,rgba(123,47,255,.1),rgba(0,212,255,.05));border:1px solid rgba(0,212,255,.12);}
+.stat-num{font-family:'Syne',sans-serif;font-size:clamp(2.2rem,4vw,4rem);font-weight:800;background:linear-gradient(135deg,var(--white),var(--grey));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.45rem;display:block;}
+.dj-stat.feat .stat-num{background:linear-gradient(135deg,var(--cyan),var(--white));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.stat-lbl{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--violet);margin-bottom:.65rem;display:block;}
+.stat-desc{font-size:.83rem;color:var(--grey);line-height:1.6;font-weight:300;}
+
+/* ===== TOP TRACKS (RÉELLES) ===== */
+#tracks{padding:8rem 6vw;background:var(--black);}
+.tracks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:3.5rem;}
+.track-card{position:relative;background:var(--card-bg);border:1px solid rgba(255,255,255,.06);overflow:hidden;transition:all .4s cubic-bezier(.25,.46,.45,.94);cursor:none;}
+.track-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(123,47,255,.1),rgba(0,212,255,.04));opacity:0;transition:opacity .4s;z-index:1;}
+.track-card::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--violet),transparent);transform:scaleX(0);transition:transform .5s ease;z-index:2;}
+.track-card:hover::before{opacity:1;}
+.track-card:hover::after{transform:scaleX(1);}
+.track-card:hover{transform:translateY(-6px);border-color:rgba(123,47,255,.3);box-shadow:0 20px 60px rgba(0,0,0,.6),0 0 40px rgba(123,47,255,.15);}
+
+/* Cover Bandcamp */
+.track-cover{width:100%;aspect-ratio:1;object-fit:cover;display:block;filter:brightness(.85);transition:filter .4s;}
+.track-card:hover .track-cover{filter:brightness(1);}
+.cover-fallback{width:100%;aspect-ratio:1;background:linear-gradient(135deg,rgba(123,47,255,.2),rgba(0,212,255,.1));display:flex;align-items:center;justify-content:center;font-size:2rem;}
+
+.track-body{padding:1.5rem;position:relative;z-index:2;}
+.track-num{font-family:'Syne',sans-serif;font-size:.58rem;letter-spacing:.2em;color:var(--violet);margin-bottom:.8rem;display:block;}
+.track-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:.3rem;color:var(--white);}
+.track-artist{font-size:.78rem;color:var(--grey);margin-bottom:1.2rem;font-weight:300;}
+.track-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.2rem;}
+.tag{font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;padding:3px 9px;border:1px solid rgba(123,47,255,.3);color:var(--violet);background:rgba(123,47,255,.08);}
+.tag.c{border-color:rgba(0,212,255,.3);color:var(--cyan);background:rgba(0,212,255,.05);}
+.tag.g{border-color:rgba(255,200,0,.4);color:#ffc800;background:rgba(255,200,0,.05);}
+.track-btn{display:inline-flex;align-items:center;gap:7px;padding:.55rem 1.1rem;font-family:'Syne',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--white);border:1px solid rgba(255,255,255,.14);text-decoration:none;transition:all .3s;cursor:none;}
+.track-btn:hover{background:var(--violet);border-color:var(--violet);box-shadow:0 0 18px rgba(123,47,255,.4);}
+
+/* ===== LIVE ===== */
+#live{padding:10rem 6vw;background:var(--deep);text-align:center;position:relative;}
+.live-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(123,47,255,.08) 0%,transparent 60%),radial-gradient(ellipse at 80% 50%,rgba(0,212,255,.05) 0%,transparent 60%);}
+.live-counters{display:flex;justify-content:center;gap:5rem;margin-bottom:4rem;flex-wrap:wrap;}
+.cnt-item{text-align:center;}
+.cnt-num{font-family:'Syne',sans-serif;font-size:clamp(2.5rem,5vw,5rem);font-weight:800;background:linear-gradient(135deg,var(--violet),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;line-height:1;}
+.cnt-lbl{font-size:.63rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-top:.5rem;display:block;}
+.tension{display:flex;justify-content:center;gap:3px;margin:3rem 0;align-items:flex-end;height:80px;}
+.t-bar{width:3px;background:linear-gradient(to top,var(--violet),var(--cyan));border-radius:2px;animation:tens 1.5s ease-in-out infinite;}
+@keyframes tens{0%,100%{height:12%;opacity:.2}50%{height:100%;opacity:1}}
+.live-q{font-family:'Syne',sans-serif;font-size:clamp(1.5rem,3.8vw,3.2rem);font-weight:700;line-height:1.2;max-width:760px;margin:0 auto 2rem;letter-spacing:-.02em;}
+.live-q em{font-style:normal;background:linear-gradient(90deg,var(--violet),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.live-desc{font-size:.95rem;color:var(--grey);max-width:460px;margin:0 auto;line-height:1.7;font-weight:300;}
+
+/* ===== VIDEO LIVE ===== */
+#video-live{padding:8rem 6vw;background:var(--black);position:relative;overflow:hidden;}
+.video-live-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,390px);align-items:center;gap:clamp(3rem,7vw,7rem);}
+.video-live-copy{min-width:0;max-width:650px;}
+.video-live-copy .s-title{font-size:clamp(2.8rem,4.2vw,4.8rem);line-height:.96;max-width:12ch;margin-bottom:1.5rem;overflow-wrap:normal;}
+.video-live-copy p{max-width:540px;color:var(--grey);font-size:.95rem;line-height:1.8;font-weight:300;}
+.video-live-frame{position:relative;width:100%;aspect-ratio:9/16;background:#000;border:1px solid rgba(123,47,255,.35);box-shadow:0 28px 90px rgba(0,0,0,.65),0 0 55px rgba(123,47,255,.16);overflow:hidden;}
+.video-live-frame::before{content:'';position:absolute;inset:-1px;z-index:2;pointer-events:none;border:1px solid rgba(0,212,255,.12);}
+.video-live-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.video-live-link{display:inline-flex;margin-top:1.5rem;color:var(--cyan);font-family:'Syne',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;}
+.video-live-link:hover{color:var(--white);}
+@media(max-width:760px){#video-live{padding:6rem 6vw}.video-live-inner{grid-template-columns:1fr}.video-live-frame{max-width:390px;margin:0 auto}}
+
+/* ===== MIX & PLATEFORMES ===== */
+#listen{padding:8rem 6vw;background:var(--deep);border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04);}
+.listen-inner{max-width:1180px;margin:0 auto;}
+.listen-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:2.5rem;}
+.listen-head .s-title{font-size:clamp(2.4rem,4.6vw,4.8rem);margin:0;}
+.listen-head p{max-width:430px;color:var(--grey);font-size:.9rem;line-height:1.75;}
+.mix-player{position:relative;width:100%;aspect-ratio:16/9;background:#050508;border:1px solid rgba(123,47,255,.28);box-shadow:0 25px 75px rgba(0,0,0,.5);overflow:hidden;}
+.mix-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.platforms{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem;}
+.platform-link{display:inline-flex;align-items:center;justify-content:center;min-width:150px;padding:.85rem 1.3rem;border:1px solid rgba(255,255,255,.14);color:var(--white);font-family:'Syne',sans-serif;font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:.3s;}
+.platform-link:hover{border-color:var(--cyan);background:rgba(0,212,255,.07);transform:translateY(-2px);}
+.platform-link.primary{background:linear-gradient(135deg,var(--violet),var(--blue));border-color:transparent;}
+@media(max-width:760px){#listen{padding:6rem 6vw}.listen-head{display:block}.listen-head p{margin-top:1.2rem}.platform-link{flex:1;min-width:135px}}
+
+/* ===== BOOKING ===== */
+#booking{padding:8rem 6vw;background:var(--black);position:relative;overflow:hidden;}
+.booking-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(123,47,255,.05) 0%,transparent 60%);}
+.booking-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;}
+.booking-desc{font-size:.9rem;color:var(--grey);line-height:1.7;font-weight:300;margin-bottom:2.5rem;}
+.contact-block{display:flex;flex-direction:column;gap:.8rem;margin-bottom:2rem;}
+.ci{display:flex;align-items:center;gap:1rem;padding:1.1rem 1.4rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);text-decoration:none;color:var(--white);transition:all .3s;position:relative;overflow:hidden;}
+.ci::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--violet),var(--cyan));transform:scaleY(0);transition:transform .3s;}
+.ci:hover{background:rgba(123,47,255,.08);border-color:rgba(123,47,255,.25);transform:translateX(4px);}
+.ci:hover::before{transform:scaleY(1);}
+.ci.main{background:linear-gradient(135deg,rgba(123,47,255,.15),rgba(0,212,255,.08));border-color:rgba(123,47,255,.3);box-shadow:0 0 25px rgba(123,47,255,.1);}
+.ci.main:hover{box-shadow:0 0 45px rgba(123,47,255,.25);}
+.ci-ico{font-size:1.3rem;flex-shrink:0;}
+.ci-lbl{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--grey);display:block;margin-bottom:.15rem;}
+.ci-val{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;}
+.ci-val.pn{font-size:1.25rem;background:linear-gradient(90deg,var(--violet),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+
+/* FORM */
+.form-title{font-family:'Syne',sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:1.8rem;}
+.fg{margin-bottom:1.1rem;}
+.fg label{display:block;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin-bottom:.55rem;}
+.fg input,.fg select,.fg textarea{width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:var(--white);padding:.8rem .95rem;font-family:'DM Sans',sans-serif;font-size:.88rem;outline:none;transition:border-color .3s,box-shadow .3s;appearance:none;-webkit-appearance:none;}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,.22);}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--violet);box-shadow:0 0 0 3px rgba(123,47,255,.14);background:rgba(123,47,255,.04);}
+.fg select option{background:#0d0a1a;color:var(--white);}
+.fg textarea{resize:vertical;min-height:100px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.date-trigger{width:100%;min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:.8rem;padding:.72rem .9rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:var(--white);font-family:'DM Sans',sans-serif;text-align:left;cursor:pointer;transition:border-color .3s,box-shadow .3s,background .3s;}
+.date-trigger:hover,.date-trigger[aria-expanded="true"]{border-color:var(--violet);box-shadow:0 0 0 3px rgba(123,47,255,.14);background:rgba(123,47,255,.06);}
+.date-trigger-main{display:flex;align-items:center;gap:.65rem;font-size:.86rem;}
+.date-trigger-date{display:block;font-size:.68rem;color:var(--cyan);margin-top:.12rem;}
+.date-trigger-arrow{font-size:.72rem;color:var(--grey);transition:transform .25s;}
+.date-trigger[aria-expanded="true"] .date-trigger-arrow{transform:rotate(180deg);}
+.calendar-drawer{margin-top:.55rem;padding:.85rem;background:#0d0a1a;border:1px solid rgba(123,47,255,.28);box-shadow:0 18px 50px rgba(0,0,0,.45);animation:calOpen .22s ease;}
+.calendar-drawer[hidden]{display:none;}
+@keyframes calOpen{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.calendar-head{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:.7rem;}
+.calendar-title{font-family:'Syne',sans-serif;font-size:.78rem;font-weight:700;text-transform:capitalize;text-align:center;}
+.calendar-nav{width:30px;height:30px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);color:var(--white);cursor:pointer;font-size:1rem;}
+.calendar-nav:hover:not(:disabled){border-color:var(--violet);background:rgba(123,47,255,.14);}
+.calendar-nav:disabled{opacity:.25;cursor:not-allowed;}
+.calendar-weekdays,.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;}
+.calendar-weekdays span{font-size:.54rem;color:var(--grey);text-align:center;text-transform:uppercase;padding:.2rem 0;}
+.calendar-day,.calendar-empty{aspect-ratio:1;display:grid;place-items:center;}
+.calendar-day{border:1px solid transparent;background:rgba(255,255,255,.035);color:var(--white);font-family:'DM Sans',sans-serif;font-size:.72rem;cursor:pointer;transition:all .18s;}
+.calendar-day:hover:not(:disabled){border-color:var(--cyan);background:rgba(0,212,255,.1);}
+.calendar-day.today{border-color:rgba(0,212,255,.45);color:var(--cyan);}
+.calendar-day.selected{background:linear-gradient(135deg,var(--violet),var(--blue));border-color:var(--violet);color:#fff;box-shadow:0 0 15px rgba(123,47,255,.45);}
+.calendar-day:disabled{opacity:.2;cursor:not-allowed;text-decoration:line-through;}
+.calendar-help{font-size:.6rem;color:var(--grey);text-align:center;margin-top:.65rem;}
+.form-submit{width:100%;padding:.95rem;background:linear-gradient(135deg,var(--violet),var(--blue));color:#fff;border:none;font-family:'Syne',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;cursor:none;transition:all .3s;position:relative;overflow:hidden;margin-top:.4rem;}
+.form-submit::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--cyan),var(--violet));transform:translateX(-101%);transition:transform .4s cubic-bezier(.7,0,.3,1);}
+.form-submit:hover::before{transform:translateX(0);}
+.form-submit span{position:relative;z-index:1;}
+.form-submit:hover{box-shadow:0 0 40px rgba(123,47,255,.5);transform:translateY(-2px);}
+.form-note{font-size:.68rem;color:var(--grey);margin-top:.7rem;text-align:center;font-weight:300;}
+.form-success{display:none;text-align:center;padding:2rem;background:rgba(0,212,255,.05);border:1px solid rgba(0,212,255,.2);}
+.form-success.show{display:block;}
+.form-success .s-ico{font-size:2rem;margin-bottom:1rem;display:block;}
+
+/* ===== CTA FINAL ===== */
+#cta{padding:8rem 6vw;text-align:center;background:var(--deep);position:relative;overflow:hidden;}
+.cta-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:280px;background:radial-gradient(ellipse,rgba(123,47,255,.14) 0%,transparent 70%);pointer-events:none;animation:ctaB 4s ease-in-out infinite;}
+@keyframes ctaB{0%,100%{opacity:.5;transform:translate(-50%,-50%) scale(1)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.1)}}
+.cta-lbl{font-size:.63rem;letter-spacing:.28em;text-transform:uppercase;color:var(--violet);margin-bottom:1.4rem;display:flex;align-items:center;justify-content:center;gap:10px;}
+.cta-lbl::before,.cta-lbl::after{content:'';width:38px;height:1px;background:var(--violet);}
+.cta-title{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,4.5rem);font-weight:800;line-height:1;letter-spacing:-.03em;margin-bottom:1.4rem;}
+.cta-sub{color:var(--grey);font-size:.95rem;margin-bottom:2.8rem;font-weight:300;}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+
+/* ===== FOOTER ===== */
+footer{padding:2rem 6vw;border-top:1px solid rgba(255,255,255,.05);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.f-logo{font-family:'Syne',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);}
+.f-links{display:flex;gap:2rem;}
+.f-links a{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);text-decoration:none;transition:color .3s;}
+.f-links a:hover{color:var(--violet);}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}.d4{transition-delay:.4s;}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  .booking-inner{grid-template-columns:1fr;gap:3.5rem;}
+  .dj-grid{grid-template-columns:1fr 1fr;}
+  .venues-grid{grid-template-columns:repeat(2,1fr);}
+  .presence-inner{flex-direction:column;}
+}
+@media(max-width:600px){
+  body{cursor:auto;}
+  .cur,.cur-ring,.float-phone{display:none;}
+  .form-row{grid-template-columns:1fr;}
+  .live-counters{gap:2rem;}
+  .dj-grid{grid-template-columns:1fr;}
+  .venues-grid{grid-template-columns:1fr 1fr;}
+  footer{flex-direction:column;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<div class="cur" id="cur"></div>
+<div class="cur-ring" id="curRing"></div>
+
+<!-- FLOATING PHONE -->
+<a href="tel:+33659986750" class="float-phone">📞 06 59 98 67 50</a>
+
+<!-- ====== HERO ====== -->
+<section id="hero">
+  <div class="hero-photo"></div>
+  <div class="hero-ov"></div>
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="beam"></div><div class="beam"></div><div class="beam"></div>
+  <div class="eq-deco" id="eqDeco"></div>
+
+  <nav>
+    <a href="#" class="nav-logo">VB<span>.</span></a>
+    <div class="bpm-pill">
+      <div class="bpm-dot"></div>
+      <span class="bpm-txt">126 BPM · Live</span>
+    </div>
+  </nav>
+
+  <div class="hero-cnt">
+    <div class="hero-lbl">DJ · Producteur · Le Mans / Paris</div>
+    <div class="badge">
+      <span class="badge-num">36M+</span>
+      <div class="badge-txt"><strong>Écoutes · Jennifer Lopez Remix</strong>Viral international · Certifié dancefloor</div>
+    </div>
+    <h1 class="hero-title"><span class="l1">Vincent</span><span class="l2">Bastille</span></h1>
+    <p class="hero-sub">Meilleur DJ House — Le Mans / Paris</p>
+    <p class="hero-tag">Conçu pour le club. Pensé pour le dancefloor.</p>
+    <a href="tel:+33659986750" class="hero-phone"><span class="phone-ico">📞</span> Booking direct — 06 59 98 67 50</a>
+    <div class="hero-cta">
+      <a href="https://remixes.vincentbastille.online" class="btn btn-p"><i>▶</i><span>Écouter maintenant</span></a>
+      <a href="#booking" class="btn btn-o"><i>◈</i><span>Demander un devis</span></a>
+    </div>
+  </div>
+  <div class="scroll-hint"><div class="scroll-line"></div><span>Scroll</span></div>
+</section>
+
+<!-- ====== PRÉSENCE SCÈNE ====== -->
+<section id="presence">
+  <div class="presence-inner">
+    <div class="reveal">
+      <div class="s-label">Sur scène</div>
+      <h2 class="presence-title">Festivals.<br><em>Clubs. Bars.</em></h2>
+      <p class="presence-desc">30 ans de dancefloor. Une présence scénique incomparable — des festivals aux clubs premium, des bars tendance aux soirées privées.</p>
+    </div>
+    <div class="venues-grid reveal d2">
+      <div class="venue"><span class="v-icon">🎪</span><span class="v-type">Festivals</span><span class="v-name">France & International</span></div>
+      <div class="venue"><span class="v-icon">🔊</span><span class="v-type">Clubs</span><span class="v-name">Le Mans · Paris · Sarthe</span></div>
+      <div class="venue"><span class="v-icon">🍸</span><span class="v-type">Bars</span><span class="v-name">Sets curatés · Ambiance</span></div>
+      <div class="venue"><span class="v-icon">💍</span><span class="v-type">Mariages</span><span class="v-name">Sarthe · Paris · France</span></div>
+      <div class="venue"><span class="v-icon">🏢</span><span class="v-type">Entreprise</span><span class="v-name">Séminaires · Lancements</span></div>
+      <div class="venue"><span class="v-icon">🎂</span><span class="v-type">Privé</span><span class="v-name">Anniversaires · Pool party</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOR DJs ====== -->
+<section id="fordjs">
+  <div class="s-label reveal">For DJs Only</div>
+  <h2 class="s-title reveal d1">Des weapons.<br>Pas des tracks.</h2>
+  <div class="dj-grid">
+    <div class="dj-stat feat reveal d1">
+      <span class="stat-num">36M+</span>
+      <span class="stat-lbl">Écoutes · Remix Jennifer Lopez</span>
+      <p class="stat-desc">Un phénomène viral international. 36 millions d'écoutes sur le remix Jennifer Lopez — la carte maîtresse. La preuve que la house de Vincent Bastille traverse les frontières.</p>
+    </div>
+    <div class="dj-stat reveal d2">
+      <span class="stat-num">#2</span>
+      <span class="stat-lbl">Beatport Mondial · Madonna</span>
+      <p class="stat-desc">Ray of Light Remix classé #2 mondial sur Beatport. Prouvé en compétition internationale. 25 téléchargements — un classique du dancefloor.</p>
+    </div>
+    <div class="dj-stat reveal d3">
+      <span class="stat-num">+400</span>
+      <span class="stat-lbl">Productions · 30 ans</span>
+      <p class="stat-desc">124–128 BPM. Structures pensées pour le mix — intro propre, build tendu, drop chirurgical. Des tracks qui fonctionnent en club, prouvé.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== TOP TRACKS (RÉELLES BANDCAMP) ====== -->
+<section id="tracks">
+  <div class="s-label reveal">Remixes Legacy · Bandcamp</div>
+  <h2 class="s-title reveal d1">Les tracks.<br>Les vraies.</h2>
+  <div style="margin-bottom:2rem;" class="reveal d2">
+    <a href="https://remixes.vincentbastille.online" class="btn btn-o" style="font-size:.7rem;padding:.6rem 1.2rem;">
+      <i>🔗</i><span>Voir les 70 pages SEO → remixes.vincentbastille.online</span>
+    </a>
+  </div>
+  <div class="tracks-grid">
+
+    <div class="track-card reveal d1">
+      <img class="track-cover" src="https://f4.bcbits.com/img/a2612836602_10.jpg" alt="Pasilda - Afro Medusa (Vincent Bastille Remix)" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="cover-fallback" style="display:none">🎵</div>
+      <div class="track-body">
+        <span class="track-num">NOUVEAUTÉ · 15 OCT 2026</span>
+        <div class="track-title">Pasilda (Remix)</div>
+        <div class="track-artist">Afro Medusa × Vincent Bastille</div>
+        <div class="track-tags"><span class="tag g">Nouveau</span><span class="tag">House</span></div>
+        <a href="https://vincentbastille.bandcamp.com/track/afro-medusa-pasilda-vincent-bastille-remix" class="track-btn" target="_blank">▶ Écouter / Acheter</a>
+      </div>
+    </div>
+
+    <div class="track-card reveal d1">
+      <img class="track-cover" src="https://f4.bcbits.com/img/a3507042029_10.jpg" alt="Movin' To The Sun - Hugel &amp; Ismael Angel (Vincent Bastille Remix)" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="cover-fallback" style="display:none">🎵</div>
+      <div class="track-body">
+        <span class="track-num">NOUVEAUTÉ · 29 SEPT 2026</span>
+        <div class="track-title">Movin' To The Sun (Remix)</div>
+        <div class="track-artist">Hugel &amp; Ismael Angel × Vincent Bastille</div>
+        <div class="track-tags"><span class="tag g">Nouveau</span><span class="tag">House</span></div>
+        <a href="https://vincentbastille.bandcamp.com/track/hugel-ismael-angel-movin-to-the-sun-vincent-bastille-remix" class="track-btn" target="_blank">▶ Écouter / Acheter</a>
+      </div>
+    </div>
+
+    <div class="track-card reveal d1">
+      <img class="track-cover" src="https://f4.bcbits.com/img/a2590070470_10.jpg" alt="BamBam - Hugel (Vincent Bastille Remix)" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="cover-fallback" style="display:none">🎵</div>
+      <div class="track-body">
+        <span class="track-num">NOUVEAUTÉ · 27 SEPT 2026</span>
+        <div class="track-title">BamBam (Remix)</div>
+        <div class="track-artist">Hugel × Vincent Bastille</div>
+        <div class="track-tags"><span class="tag g">Nouveau</span><span class="tag">House</span></div>
+        <a href="https://vincentbastille.bandcamp.com/track/hugel-bambam-vincent-bastille-remix" class="track-btn" target="_blank">▶ Écouter / Acheter</a>
+      </div>
+    </div>
+
+    <!-- 1. JLo -->
+    <div class="track-card reveal d1">
+      <img class="track-cover" src="https://f4.bcbits.com/img/a0541613845_10.jpg" alt="Remixes Legacy - Vincent Bastille" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="cover-fallback" style="display:none">🎵</div>
+      <div class="track-body">
+        <span class="track-num">001 · VIRAL · #1 BANDCAMP</span>
+        <div class="track-title">Can't Get Enough</div>
+        <div class="track-artist">Jennifer Lopez × Vincent Bastille</div>
+        <div class="track-tags"><span class="tag g">36M Écoutes</span><span class="tag c">124 BPM</span><span class="tag">House</span></div>
+        <a href="https://vincentbastille.bandcamp.com/track/jennifer-lopez-cant-get-enough-vincent-bastille-remix" class="track-btn" target="_blank">▶ Écouter / Acheter</a>
+      </div>
+    </div>
+
+    <!-- 2. Madonna -->
+    <div class="track-card reveal d2">
+      <img class="track-cover" src="https://f4.bcbits.com/img/a0541613845_10.jpg" alt="Remixes Legacy" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="cover-fallback" style="display:none">🎵</div>
+      <div class="track-body">
+        <span class="track-num">002 · #2 BEATPORT MONDIAL</span>
+        <div class="track-title">Ray of Light (Remix)</div>
+        <div class="track-artist">Madonna × Vincent Bastille</div>
+        <div class="track-tags"><span class="tag g">#2 Beatport</span><span class="tag c">126 BPM</span><span class="tag">Tech House</span></div>
+        <a href="https://vincentbastille.bandcamp.com/track/madonna-ray-of-light-vincent-bastille-remix-2" class="track-btn" target="_blank">▶ Écouter / Acheter</a>
+      </div>
+    </div>
+
+    <!-- 3. MJ -->
+    <div class="track-card reveal d3">
+      <img class="track-cover" src="https://f4.bcbits.com/img/a0541613845_10.jpg" alt="Remixes Legacy" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="cover-fallback" style="display:none">🎵</div>
+      <div class="track-body">
+        <span class="track-num">003 · DISCO HOUSE</span>
+        <div class="track-title">You Rock My World</div>
+        <div class="track-artist">Michael Jackson × Vincent Bastille</div>
+        <div class="track-tags"><span class="tag">Disco House</span><span class="tag c">124 BPM</span><span class="tag">7:27</span></div>
+        <a href="https://vincentbastille.bandcamp.com/track/michael-jackson-you-rock-my-world-vincent-bastille-remix" class="track-btn" target="_blank">▶ Écouter / Acheter</a>
+      </div>
+    </div>
+
+    <!-- 4. Sade -->
+    <div class="track-card reveal d1">
+      <img class="track-cover" src="https://f4.bcbits.com/img/a0541613845_10.jpg" alt="Remixes Legacy" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="cover-fallback" style="display:none">🎵</div>
+      <div class="track-body">
+        <span class="track-num">004 · TOP 5 VENTES</span>
+        <div class="track-title">Smooth Operator (Remix)</div>
+        <div class="track-artist">Sade × Vincent Bastille</div>
+        <div class="track-tags"><span class="tag">Electronic</span><span class="tag c">125 BPM</span><span class="tag">7:21</span></div>
+        <a href="https://vincentbastille.bandcamp.com/track/sade-smooth-operator-vincent-bastille-remix-2" class="track-btn" target="_blank">▶ Écouter / Acheter</a>
+      </div>
+    </div>
+
+    <!-- 5. Wondering Stars -->
+    <div class="track-card reveal d2">
+      <img class="track-cover" src="https://f4.bcbits.com/img/a0541613845_10.jpg" alt="Remixes Legacy" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="cover-fallback" style="display:none">🎵</div>
+      <div class="track-body">
+        <span class="track-num">005 · ORIGINAL · €46 VENTES</span>
+        <div class="track-title">Wondering Stars</div>
+        <div class="track-artist">Vincent Bastille — Liquid D&B</div>
+        <div class="track-tags"><span class="tag g">Best Seller</span><span class="tag c">128 BPM</span><span class="tag">Original</span></div>
+        <a href="https://vincentbastille.bandcamp.com/track/wondering-stars-liquid-drum-bass-edition" class="track-btn" target="_blank">▶ Écouter / Acheter</a>
+      </div>
+    </div>
+
+    <!-- 6. Hotel California -->
+    <div class="track-card reveal d3">
+      <img class="track-cover" src="https://f4.bcbits.com/img/a0541613845_10.jpg" alt="Remixes Legacy" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="cover-fallback" style="display:none">🎵</div>
+      <div class="track-body">
+        <span class="track-num">006 · HOUSE REMIX</span>
+        <div class="track-title">Hotel California (Remix)</div>
+        <div class="track-artist">The Eagles × Vincent Bastille</div>
+        <div class="track-tags"><span class="tag">House</span><span class="tag c">126 BPM</span><span class="tag">5:52</span></div>
+        <a href="https://vincentbastille.bandcamp.com/track/the-eagles-hotel-california-vincent-bastille-remix-2" class="track-btn" target="_blank">▶ Écouter / Acheter</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ALBUM LINK -->
+  <div style="text-align:center;margin-top:3rem;" class="reveal">
+    <p style="font-size:.8rem;color:var(--grey);margin-bottom:1.2rem;font-weight:300;">12 tracks au total · MP3 · FLAC · WAV</p>
+    <a href="https://vincentbastille.bandcamp.com/album/vincent-bastille-remixes-legacy" class="btn btn-p" target="_blank">
+      <i>◈</i><span>Voir l'album complet sur Bandcamp</span>
+    </a>
+  </div>
+</section>
+
+<!-- ====== LIVE ====== -->
+<section id="live">
+  <div class="live-bg"></div>
+  <div class="live-counters">
+    <div class="cnt-item reveal"><span class="cnt-num" data-target="36" data-suf="M+">0</span><span class="cnt-lbl">Écoutes JLo Remix</span></div>
+    <div class="cnt-item reveal d1"><span class="cnt-num" data-target="30" data-suf="+">0</span><span class="cnt-lbl">Ans d'expérience</span></div>
+    <div class="cnt-item reveal d2"><span class="cnt-num" data-target="400" data-suf="+">0</span><span class="cnt-lbl">Productions</span></div>
+    <div class="cnt-item reveal d3"><span class="cnt-num" data-target="509k" data-suf="">0</span><span class="cnt-lbl">Downloads Bandcamp</span></div>
+  </div>
+  <div class="tension" id="tensionBar"></div>
+  <h2 class="live-q reveal">La house n'est pas une playlist.<br>C'est une <em>conversation</em><br>avec la salle.</h2>
+  <p class="live-desc reveal d1">Chaque track est une tension. Chaque drop, une réponse.<br>Vincent Bastille joue avec l'énergie d'une salle — pas contre elle.</p>
+</section>
+
+<!-- ====== VIDEO LIVE ====== -->
+<section id="video-live">
+  <div class="video-live-inner">
+    <div class="video-live-copy reveal">
+      <div class="s-label">Vincent Bastille en vidéo</div>
+      <h2 class="s-title">L’énergie<br>en mouvement.</h2>
+      <p>Découvrez Vincent Bastille dans son univers. Une présence construite par trente ans de musique, de clubs et de scènes, avec la même attention portée au public et à l’énergie du moment.</p>
+    </div>
+    <div class="video-live-frame reveal d2">
+      <video controls playsinline preload="metadata" poster="/portrait.jpg" src="/le-vaud-mix.mp4" title="Vincent Bastille en live au Bar Le Vaud, Le Mans" style="width:100%;max-width:420px;border-radius:12px;background:#000"></video>
+    </div>
+  </div>
+</section>
+
+<!-- ====== MIX & PLATEFORMES ====== -->
+<section id="listen">
+  <div class="listen-inner">
+    <div class="listen-head">
+      <div class="reveal">
+        <div class="s-label">Écouter Vincent Bastille</div>
+        <h2 class="s-title">8 heures de<br>Disco House.</h2>
+      </div>
+      <p class="reveal d1">Une nuit complète entre Disco House, Groove Culture, influences UK et US, classiques réinventés et énergie dancefloor.</p>
+    </div>
+    <div class="mix-player reveal d2">
+      <iframe src="https://www.youtube-nocookie.com/embed/4oXs_ruRhMM" title="Vincent Bastille — Disco House Mix" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="platforms reveal d3">
+      <a class="platform-link primary" href="https://youtu.be/4oXs_ruRhMM" target="_blank" rel="noopener">Mix YouTube</a>
+      <a class="platform-link" href="https://open.spotify.com/intl-fr/artist/2QS54zBHMU8zdaRs1pQRF0" target="_blank" rel="noopener">Spotify</a>
+      <a class="platform-link" href="https://vincentbastille.bandcamp.com/" target="_blank" rel="noopener">Bandcamp</a>
+      <a class="platform-link" href="https://www.youtube.com/@vincentbastillle" target="_blank" rel="noopener">Chaîne YouTube</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== BOOKING ====== -->
+<section id="booking">
+  <div class="booking-bg"></div>
+  <div class="booking-inner">
+    <div>
+      <div class="s-label reveal">Booking</div>
+      <h2 class="s-title reveal d1">Réservez<br>une date.</h2>
+      <p class="booking-desc reveal d2">Festivals, clubs, bars, mariages, soirées privées — réponse rapide garantie. Devis gratuit, pas de commission d'agence. Disponible sur toute la France.</p>
+      <div class="contact-block reveal d3">
+        <a href="tel:+33659986750" class="ci main">
+          <span class="ci-ico">📞</span>
+          <div><span class="ci-lbl">Appel direct · Booking immédiat</span><span class="ci-val pn">06 59 98 67 50</span></div>
+        </a>
+        <a href="https://wa.me/33659986750" class="ci" target="_blank">
+          <span class="ci-ico">💬</span>
+          <div><span class="ci-lbl">WhatsApp</span><span class="ci-val">Message direct</span></div>
+        </a>
+        <a href="mailto:vincentbastille100@gmail.com" class="ci">
+          <span class="ci-ico">✉️</span>
+          <div><span class="ci-lbl">Email</span><span class="ci-val">vincentbastille100@gmail.com</span></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="reveal d2">
+      <p class="form-title">Demande de booking</p>
+      <div id="formOK" class="form-success"><span class="s-ico">✅</span><p>Demande envoyée ! Vincent vous répond sous 24h.</p></div>
+      <form id="bookForm" action="https://formspree.io/f/mzdjogoa" method="POST">
+        <input type="hidden" name="_subject" value="Nouvelle demande de booking — vincentbastille.online">
+        <input type="hidden" name="_language" value="fr">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+        <div class="form-row">
+          <div class="fg"><label>Nom / Structure *</label><input type="text" name="name" placeholder="Votre nom" required></div>
+          <div class="fg"><label>Email *</label><input type="email" name="email" placeholder="votre@email.com" required></div>
+        </div>
+        <div class="form-row">
+          <div class="fg"><label>Téléphone</label><input type="tel" name="phone" placeholder="06 XX XX XX XX"></div>
+          <div class="fg"><label>Type d'événement *</label>
+            <select name="event_type" required>
+              <option value="" disabled selected>Choisir...</option>
+              <option>Festival</option><option>Club / Bar</option><option>Mariage</option>
+              <option>Soirée d'entreprise</option><option>Anniversaire / Privé</option><option>Autre</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="fg">
+            <label>Date souhaitée</label>
+            <input type="hidden" name="date" id="bookingDate">
+            <button type="button" class="date-trigger" id="calendarToggle" aria-expanded="false" aria-controls="bookingCalendar">
+              <span class="date-trigger-main"><span>📅</span><span>Choisir le jour<span class="date-trigger-date" id="selectedDateLabel">Aucune date sélectionnée</span></span></span>
+              <span class="date-trigger-arrow">▼</span>
+            </button>
+            <div class="calendar-drawer" id="bookingCalendar" hidden>
+              <div class="calendar-head">
+                <button type="button" class="calendar-nav" id="calendarPrev" aria-label="Mois précédent">‹</button>
+                <div class="calendar-title" id="calendarTitle"></div>
+                <button type="button" class="calendar-nav" id="calendarNext" aria-label="Mois suivant">›</button>
+              </div>
+              <div class="calendar-weekdays" aria-hidden="true"><span>Lun</span><span>Mar</span><span>Mer</span><span>Jeu</span><span>Ven</span><span>Sam</span><span>Dim</span></div>
+              <div class="calendar-grid" id="calendarGrid" role="grid" aria-label="Choisir une date"></div>
+              <p class="calendar-help">Cliquez sur le jour exact de votre événement</p>
+            </div>
+          </div>
+          <div class="fg"><label>Lieu / Ville</label><input type="text" name="location" placeholder="Le Mans, Paris..."></div>
+        </div>
+        <div class="fg"><label>Message</label><textarea name="message" placeholder="Décrivez votre événement, jauge, budget indicatif..."></textarea></div>
+        <button type="submit" class="form-submit"><span>Envoyer la demande →</span></button>
+        <p class="form-note">Réponse sous 24h · Devis gratuit · Pas de commission</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA FINAL ====== -->
+<section id="cta">
+  <div class="cta-glow"></div>
+  <div class="cta-lbl reveal">Passez à l'action</div>
+  <h2 class="cta-title reveal d1">Jouez Vincent Bastille<br>dans votre prochain set.</h2>
+  <p class="cta-sub reveal d2">36M d'écoutes · #2 Beatport · 509k downloads · +400 tracks testés en club.</p>
+  <div class="cta-btns reveal d3">
+    <a href="https://remixes.vincentbastille.online" class="btn btn-p"><i>▶</i><span>Explorer les remixes</span></a>
+    <a href="https://vincentbastille.bandcamp.com/album/vincent-bastille-remixes-legacy" class="btn btn-o" target="_blank"><i>◈</i><span>Album Bandcamp</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">© 2026 Vincent Bastille — DJ House · Le Mans / Paris</div>
+  <div class="f-links">
+    <a href="https://www.vincentbastille.online">Site principal</a>
+    <a href="https://remixes.vincentbastille.online">Remixes</a>
+    <a href="https://vincentbastille.bandcamp.com" target="_blank">Bandcamp</a>
+    <a href="https://open.spotify.com/intl-fr/artist/2QS54zBHMU8zdaRs1pQRF0" target="_blank">Spotify</a>
+    <a href="#booking">Booking</a>
+  </div>
+</footer>
+
+<script>
+// CURSOR
+const cur=document.getElementById('cur'),ring=document.getElementById('curRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+(function a(){cur.style.left=mx+'px';cur.style.top=my+'px';rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a);})();
+document.querySelectorAll('a,button,input,select,textarea,.track-card,.dj-stat,.venue').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.width='18px';cur.style.height='18px';ring.style.width='55px';ring.style.height='55px';ring.style.borderColor='rgba(0,212,255,.6)';});
+  el.addEventListener('mouseleave',()=>{cur.style.width='10px';cur.style.height='10px';ring.style.width='36px';ring.style.height='36px';ring.style.borderColor='rgba(123,47,255,.5)';});
+});
+
+// EQ DECO
+const eq=document.getElementById('eqDeco');
+for(let i=0;i<14;i++){const b=document.createElement('div');b.className='eq-b';b.style.height=Math.random()*80+15+'%';b.style.animationDelay=(Math.random()*1.2).toFixed(2)+'s';b.style.animationDuration=(.8+Math.random()*.8).toFixed(2)+'s';eq.appendChild(b);}
+
+// TENSION BARS
+const tb=document.getElementById('tensionBar');
+for(let i=0;i<44;i++){const b=document.createElement('div');b.className='t-bar';b.style.animationDelay=(Math.random()*1.5).toFixed(2)+'s';b.style.animationDuration=(1+Math.random()).toFixed(2)+'s';tb.appendChild(b);}
+
+// SCROLL REVEAL
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// COUNTERS
+function animCount(el,target,suf){
+  let c=0;const step=target/65;
+  const iv=setInterval(()=>{c=Math.min(c+step,target);el.textContent=Math.floor(c)+suf;if(c>=target)clearInterval(iv);},22);
+}
+const cObs=new IntersectionObserver(e=>e.forEach(x=>{
+  if(x.isIntersecting){
+    const n=x.target.querySelector('.cnt-num');
+    if(n)animCount(n,parseInt(n.dataset.target),n.dataset.suf||'');
+    cObs.unobserve(x.target);
+  }
+}),{threshold:.5});
+document.querySelectorAll('.cnt-item').forEach(el=>cObs.observe(el));
+
+// PARALLAX
+window.addEventListener('scroll',()=>{
+  const sy=window.scrollY;
+  const p=document.querySelector('.hero-photo');
+  if(p)p.style.transform=`scale(1.08) translateY(${sy*.18}px)`;
+},{passive:true});
+
+// FORM
+const bookingDate=document.getElementById('bookingDate');
+const calendarToggle=document.getElementById('calendarToggle');
+const calendarDrawer=document.getElementById('bookingCalendar');
+const calendarTitle=document.getElementById('calendarTitle');
+const calendarGrid=document.getElementById('calendarGrid');
+const calendarPrev=document.getElementById('calendarPrev');
+const calendarNext=document.getElementById('calendarNext');
+const selectedDateLabel=document.getElementById('selectedDateLabel');
+const today=new Date();today.setHours(0,0,0,0);
+const monthNames=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+let calendarMonth=new Date(today.getFullYear(),today.getMonth(),1,12);
+
+function dateISO(y,m,d){return `${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;}
+function renderCalendar(){
+  const y=calendarMonth.getFullYear(),m=calendarMonth.getMonth();
+  calendarTitle.textContent=`${monthNames[m]} ${y}`;
+  calendarPrev.disabled=y===today.getFullYear()&&m===today.getMonth();
+  calendarGrid.innerHTML='';
+  const first=(new Date(y,m,1,12).getDay()+6)%7;
+  const total=new Date(y,m+1,0,12).getDate();
+  for(let i=0;i<first;i++){
+    const empty=document.createElement('span');empty.className='calendar-empty';calendarGrid.appendChild(empty);
+  }
+  for(let d=1;d<=total;d++){
+    const dayDate=new Date(y,m,d,12),iso=dateISO(y,m,d);
+    const btn=document.createElement('button');
+    btn.type='button';btn.className='calendar-day';btn.textContent=d;
+    btn.setAttribute('role','gridcell');
+    btn.setAttribute('aria-label',dayDate.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'}));
+    if(dayDate<today)btn.disabled=true;
+    if(iso===dateISO(today.getFullYear(),today.getMonth(),today.getDate()))btn.classList.add('today');
+    if(bookingDate.value===iso)btn.classList.add('selected');
+    btn.addEventListener('click',()=>{
+      bookingDate.value=iso;
+      selectedDateLabel.textContent=dayDate.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+      calendarDrawer.hidden=true;calendarToggle.setAttribute('aria-expanded','false');
+      renderCalendar();
+    });
+    calendarGrid.appendChild(btn);
+  }
+}
+calendarToggle.addEventListener('click',()=>{
+  const opening=calendarDrawer.hidden;
+  calendarDrawer.hidden=!opening;calendarToggle.setAttribute('aria-expanded',String(opening));
+  if(opening)renderCalendar();
+});
+calendarPrev.addEventListener('click',()=>{calendarMonth=new Date(calendarMonth.getFullYear(),calendarMonth.getMonth()-1,1,12);renderCalendar();});
+calendarNext.addEventListener('click',()=>{calendarMonth=new Date(calendarMonth.getFullYear(),calendarMonth.getMonth()+1,1,12);renderCalendar();});
+
+document.getElementById('bookForm').addEventListener('submit',async function(e){
+  e.preventDefault();
+  const btn=this.querySelector('.form-submit');
+  btn.innerHTML='<span>Envoi...</span>';btn.disabled=true;
+  const formData=new FormData(this);
+  const data=Object.fromEntries(formData);
+  try{
+    const res=await fetch(this.action,{method:'POST',body:formData,headers:{'Accept':'application/json'}});
+    if(res.ok){document.getElementById('formOK').classList.add('show');this.style.display='none';}
+    else throw new Error();
+  }catch{
+    const s=encodeURIComponent(`Booking VB — ${data.event_type||'Demande'}`);
+    const b=encodeURIComponent(`Nom: ${data.name}\nEmail: ${data.email}\nTél: ${data.phone||'-'}\nType: ${data.event_type}\nDate: ${data.date||'-'}\nLieu: ${data.location||'-'}\n\n${data.message||''}`);
+    window.location.href=`mailto:vincentbastille100@gmail.com?subject=${s}&body=${b}`;
+    btn.innerHTML='<span>Envoyer la demande →</span>';btn.disabled=false;
+  }
+});
+</script>
+</body>
+</html>
